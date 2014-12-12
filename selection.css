@@ -1,0 +1,243 @@
+@-webkit-keyframes hroll {
+  0% {
+    left: -20%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); }
+  50% {
+    left: 20%;
+    transform: translateZ(0) rotate(720deg);
+    -webkit-transform: translateZ(0) rotate(720deg);
+    -moz-transform: translateZ(0) rotate(720deg);
+    -ms-transform: translateZ(0) rotate(720deg); }
+  100% {
+    left: -20%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); } }
+@-moz-keyframes hroll {
+  0% {
+    left: -20%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); }
+  50% {
+    left: 20%;
+    transform: translateZ(0) rotate(720deg);
+    -webkit-transform: translateZ(0) rotate(720deg);
+    -moz-transform: translateZ(0) rotate(720deg);
+    -ms-transform: translateZ(0) rotate(720deg); }
+  100% {
+    left: -20%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); } }
+@-o-keyframes hroll {
+  0% {
+    left: -20%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); }
+  50% {
+    left: 20%;
+    transform: translateZ(0) rotate(720deg);
+    -webkit-transform: translateZ(0) rotate(720deg);
+    -moz-transform: translateZ(0) rotate(720deg);
+    -ms-transform: translateZ(0) rotate(720deg); }
+  100% {
+    left: -20%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); } }
+@keyframes hroll {
+  0% {
+    left: -20%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); }
+  50% {
+    left: 20%;
+    transform: translateZ(0) rotate(720deg);
+    -webkit-transform: translateZ(0) rotate(720deg);
+    -moz-transform: translateZ(0) rotate(720deg);
+    -ms-transform: translateZ(0) rotate(720deg); }
+  100% {
+    left: -20%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); } }
+@-webkit-keyframes bounceup {
+  0% {
+    left: -20%;
+    top: 100%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); }
+  50% {
+    top: -50%;
+    left: 0%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); }
+  100% {
+    left: 20%;
+    top: 100%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); } }
+@-moz-keyframes bounceup {
+  0% {
+    left: -20%;
+    top: 100%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); }
+  50% {
+    top: -50%;
+    left: 0%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); }
+  100% {
+    left: 20%;
+    top: 100%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); } }
+@-o-keyframes bounceup {
+  0% {
+    left: -20%;
+    top: 100%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); }
+  50% {
+    top: -50%;
+    left: 0%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); }
+  100% {
+    left: 20%;
+    top: 100%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); } }
+@keyframes bounceup {
+  0% {
+    left: -20%;
+    top: 100%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); }
+  50% {
+    top: -50%;
+    left: 0%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); }
+  100% {
+    left: 20%;
+    top: 100%;
+    transform: translateZ(0) rotate(0deg);
+    -webkit-transform: translateZ(0) rotate(0deg);
+    -moz-transform: translateZ(0) rotate(0deg);
+    -ms-transform: translateZ(0) rotate(0deg); } }
+body {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 1em;
+  margin: 0px; }
+
+div.ctloverlay {
+  color: #FFF;
+  position: absolute;
+  right: 0;
+  z-index: 1000; }
+
+div.board {
+  background-color: #000;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  div.board div {
+    position: absolute;
+    padding: .2em;
+    color: #FFF;
+    font-size: 200%;
+    font-variant: small-caps;
+    border-radius: 40%; }
+  div.board b {
+    font-size: 200%; }
+  div.board div.bouncefast {
+    -webkit-animation: bounceup 8s ease infinite;
+    -moz-animation: bounceup 8s ease infinite;
+    -o-animation: bounceup 8s ease infinite;
+    animation: bounceup 8s ease infinite; }
+  div.board div.bouncefastx {
+    -webkit-animation: bounceup 9s ease infinite;
+    -moz-animation: bounceup 9s ease infinite;
+    -o-animation: bounceup 9s ease infinite;
+    animation: bounceup 9s ease infinite; }
+  div.board div.bounceslow {
+    -webkit-animation: bounceup 18s ease infinite;
+    -moz-animation: bounceup 18s ease infinite;
+    -o-animation: bounceup 18s ease infinite;
+    animation: bounceup 18s ease infinite; }
+  div.board div.bounceslowx {
+    -webkit-animation: bounceup 19s ease infinite;
+    -moz-animation: bounceup 19s ease infinite;
+    -o-animation: bounceup 19s ease infinite;
+    animation: bounceup 19s ease infinite; }
+  div.board div.hrollslow {
+    -webkit-animation: hroll 10s linear infinite;
+    -moz-animation: hroll 10s linear infinite;
+    -o-animation: hroll 10s linear infinite;
+    animation: hroll 10s linear infinite; }
+  div.board div.hrollslowx {
+    -webkit-animation: hroll 11s linear infinite;
+    -moz-animation: hroll 11s linear infinite;
+    -o-animation: hroll 11s linear infinite;
+    animation: hroll 11s linear infinite; }
+  div.board div.hrollfast {
+    -webkit-animation: hroll 5s linear infinite;
+    -moz-animation: hroll 5s linear infinite;
+    -o-animation: hroll 5s linear infinite;
+    animation: hroll 5s linear infinite; }
+  div.board div.hrollfastx {
+    -webkit-animation: hroll 4s linear infinite;
+    -moz-animation: hroll 4s linear infinite;
+    -o-animation: hroll 4s linear infinite;
+    animation: hroll 4s linear infinite; }
+  div.board div.red {
+    color: #F00;
+    box-shadow: 0px 0px 50px 10px #800 inset; }
+  div.board div.red:hover {
+    box-shadow: 0px 0px 100px 10px #800 inset; }
+  div.board div.blue {
+    color: #00F;
+    box-shadow: 0px 0px 50px 10px #008 inset; }
+  div.board div.green {
+    color: #0F0;
+    box-shadow: 0px 0px 50px 10px #080 inset; }
+
+/*# sourceMappingURL=selection.css.map */

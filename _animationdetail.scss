@@ -1,0 +1,34 @@
+
+
+@include keyframes('hroll') {
+  0% { 
+    left:-20%;
+    @include transform(translateZ(0) rotate(0deg));
+  }
+  50% {
+    left:20%;
+	@include transform(translateZ(0) rotate(720deg));
+  }
+  100% { 
+ 	left:-20%;
+    @include transform(translateZ(0) rotate(0deg));
+  }
+};
+
+@include keyframes('bounceup') {
+  0% { 
+    left:-20%;
+	top:100%;
+    @include transform(translateZ(0) rotate(0deg));
+  }
+  50% {
+    top:-50%;
+	left:0%;
+    @include transform(translateZ(0) rotate(0deg));
+  }
+  100% { 
+ 	left:20%;
+	top:100%;
+    @include transform(translateZ(0) rotate(0deg));
+  }
+};
