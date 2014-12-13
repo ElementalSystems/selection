@@ -5,16 +5,25 @@ body {
     font-family: Tahoma, Geneva, sans-serif;	  
     font-size: 1em;    
     margin: 0px;
+	
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 	}
 
 div.ctloverlay {
   color: #FFF;
+  background-color:#666;
+  padding: 1em;
   position: absolute;
   right:0;
   z-index:  1000;
+  max-width:25%;
+  pointer-events:none;
+  opacity: .7;
 };
 
-div.board {
+#board {
     background-color: #000;
 	overflow: hidden;
 	width:100%;
@@ -29,7 +38,7 @@ div.board {
 	  font-size: 200%;
 	  font-variant: small-caps;
 	  border-radius: 40%;
-      
+      cursor:pointer;      
 	}
 	
 	b {
@@ -97,4 +106,8 @@ div.board {
 	 color: #0F0;
 	 box-shadow: 0px 0px 50px 10px #080 inset;
 	}		
+}
+
+div.leveldefinition {
+  display:none;
 }

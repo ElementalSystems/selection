@@ -1,7 +1,8 @@
 <NotepadPlus>
     <Project name="Selection">
         <File name="index.html" />
-        <File name="selection.css" />
         <File name="selection.scss" />
+        <File name="selection.css" />
+        <File name="_animationdetail.scss" />
     </Project>
 </NotepadPlus>

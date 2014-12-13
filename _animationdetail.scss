@@ -10,7 +10,7 @@
 	@include transform(translateZ(0) rotate(720deg));
   }
   100% { 
- 	left:-20%;
+ 	left:-21%;
     @include transform(translateZ(0) rotate(0deg));
   }
 };
