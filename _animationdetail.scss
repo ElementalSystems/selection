@@ -18,17 +18,22 @@
 @include keyframes('bounceup') {
   0% { 
     left:-20%;
-	top:100%;
+	top:50%;
     @include transform(translateZ(0) rotate(0deg));
   }
   50% {
-    top:-50%;
+    top:0%;
 	left:0%;
     @include transform(translateZ(0) rotate(0deg));
   }
-  100% { 
+  90% { 
  	left:20%;
-	top:100%;
+	top:50%;
+    @include transform(translateZ(0) rotate(0deg));
+  }
+  100% { 
+ 	left:-20%;
+	top:50%;
     @include transform(translateZ(0) rotate(0deg));
   }
 };

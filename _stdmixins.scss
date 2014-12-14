@@ -6,6 +6,15 @@
 	-ms-transform: $funcs;
 }
 
+
+@mixin transition($funcs...)
+{
+transition: $funcs;
+-webkit-transition: $funcs;
+-moz-transition: $funcs;
+-o-transition: $funcs;
+}
+
 @mixin keyframes($animationName) {    
     @-webkit-keyframes #{$animationName} {
 	    @content;

@@ -4,12 +4,15 @@
 	 <link rel="stylesheet" type="text/css" href="selection.css">
   </head>
   <body onload=start()>
+  <div id=game>
     <div class=ctloverlay>
-    <h1>Selection Task</h1>
+    <h3>Selection Task</h3>
 	<h2>Score <span id=score>0</span></h2>
+	<h2>Round <span id=roundnumber>0</span> / <span id=roundtotal>0</span></h2>	
+	<h1 id=onerule></h1>
 	<h2>Complete <span id=foundcount>0</span> / <span id=totalcount>0</span></h2>
-	<h2>Time <span id=timeleft>0</span></h2>	
-	<h1 id=onerule></h1>	
+	<h2><span id=timeprompt>Time</span> <span id=timeleft>0</span></h2>	
+	<a id=nextround onclick="nextRound()" href="">Next Round</a>		
 	</div>
 	<div id=board>	  
 	</div>
@@ -23,7 +26,7 @@
 	  <div class="piece blue bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
 	  <div class="piece red bouncefastx" data-duplicate-count=5><b>G</b>reen</div>
 	</div>
-  
+  </div>
   </body>
   <script src="selection.js"></script>
 </html>
