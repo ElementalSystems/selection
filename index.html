@@ -12,11 +12,11 @@
 	<h1 id=onerule></h1>
 	<h2>Complete <span id=foundcount>0</span> / <span id=totalcount>0</span></h2>
 	<h2><span id=timeprompt>Time</span> <span id=timeleft>0</span></h2>	
-	<a id=nextround onclick="nextRound()" href="">Next Round</a>		
+	<a id=nextround onclick="nextRound()" href="#">Next Round</a>		
 	</div>
 	<div id=board>	  
 	</div>
-	<div id=lev1 class=leveldefinition data-difficulty=1>
+	<div id=lev_col1 class=leveldefinition data-difficulty=1>
 	  <div class="rule">Select the words that read 'RED'</div>
 	  <div class="piece red hrollfast target" data-duplicate-count=5><b>R</b>ed</div>
 	  <div class="piece green hrollslowx target" data-duplicate-count=3><b>R</b>ed</div>
@@ -24,6 +24,26 @@
 	  <div class="piece green hrollfastx" data-duplicate-count=5><b>G</b>reen</div>
 	  <div class="piece red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
 	  <div class="piece blue bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece red bouncefastx" data-duplicate-count=5><b>G</b>reen</div>
+	</div>
+	<div id=lev_col2 class=leveldefinition data-difficulty=1>
+	  <div class="rule">Select the words whose text is coloured green</div>
+	  <div class="piece red hrollfast" data-duplicate-count=5><b>R</b>ed</div>
+	  <div class="piece green hrollslowx target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece blue bounceslow" data-duplicate-count=2><b>R</b>ed</div>
+	  <div class="piece green hrollfastx target" data-duplicate-count=2><b>G</b>reen</div>
+	  <div class="piece red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece green bounceslowx target" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece red bouncefastx" data-duplicate-count=5><b>G</b>reen</div>
+	</div>
+	<div id=lev_col3 class=leveldefinition data-difficulty=1>
+	  <div class="rule">Select the words whose text is coloured blue</div>
+	  <div class="piece red hrollfast" data-duplicate-count=5><b>R</b>ed</div>
+	  <div class="piece green hrollslowx target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece blue bounceslow" data-duplicate-count=2><b>R</b>ed</div>
+	  <div class="piece green hrollfastx target" data-duplicate-count=2><b>G</b>reen</div>
+	  <div class="piece red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece green bounceslowx target" data-duplicate-count=5><b>B</b>lue</div>
 	  <div class="piece red bouncefastx" data-duplicate-count=5><b>G</b>reen</div>
 	</div>
   </div>

@@ -1,5 +1,8 @@
 
-var game={};
+var game={
+  status:0,
+  rounds: ['lev_col1','lev_col2']
+  };
 //game status values
 // 0 - starting round
 // 1 - end play
@@ -17,7 +20,15 @@ function start()
   game.timePrompt=document.getElementById('timeprompt');  
   game.oneRuleSpan=document.getElementById('onerule');    
   game.score=0;
-  createLevel('lev1'); 
+  game.round=-1;
+  game.roundcount=game.rounds.length;
+  nextRound()
+}
+
+function nextRound()
+{
+  game.round+=1;
+  createLevel(game.rounds[game.round]);
 }
 
 function setScoreboard()
@@ -81,7 +92,7 @@ function createLevel(level)
    var items=lev.getElementsByClassName('piece');
    game.oneRuleSpan.innerHTML=lev.getElementsByClassName('rule')[0].innerHTML;
    game.levelDefinition=lev;
-   game.innerHTML="";
+   game.board.innerHTML="";
    game.totalCount=0;
    game.foundCount=0;
    game.timeInit=new Date().getTime();
