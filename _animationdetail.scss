@@ -37,3 +37,28 @@
     @include transform(translateZ(0) rotate(0deg));
   }
 };
+
+
+@include keyframes('throb') {
+  0% { 
+    opacity: 1;    
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 1;
+  }  
+};
+
+@include keyframes('growfade') {
+  0% { 
+    opacity: 1;
+    @include transform(scale(1,1));
+  }
+  100% { 
+	@include transform(scale(5,5));
+    opacity: 0;
+  }
+};
+

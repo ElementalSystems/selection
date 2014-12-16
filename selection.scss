@@ -24,13 +24,23 @@ div.ctloverlay {
   @include transition(width 1s, height 1s, right 1s, font-size 1s);  
   text-align: center;
   
-  h1 {
+  #onerule {
+    color: #000;
+	padding-left:1em;	
+	padding-right:1em;
+    padding-top: 0.1em;
+	padding-bottom: 1em;
+	margin:0;
+	
+  }
+  
+  #onerulebox {
     background-color: #CCC;
 	color: #000;
-	padding:1em;
+	padding:0;
 	border-radius: 1em;
-	border: 1px #FFF solid;
-	
+	border: 1px #FFF solid;	
+	@include animation(throb 1s linear infinite);	  
   }
   
   h3,h2 {
@@ -49,6 +59,34 @@ div.ctloverlay {
   }
 }
 
+div.indicator {
+  font-size: 500%;
+  font-weight: bold;
+  position: absolute;
+  pointer-events:none;
+  z-index:1000;
+  opacity: 1;  
+}
+
+#goodhit {
+  color: #0F0;  
+}
+
+#badhit {
+  color: #F00;  
+}
+
+div.indicator.active {
+  position: absolute;
+  pointer-events:none;
+  z-index:1000;  
+  opacity: 0;
+  @include transform(scale(3,3));
+  @include transition(opacity 1s, transform 1s);
+  display:block;  
+}
+
+
 div.inplay {
 	div.ctloverlay{
 	  pointer-events:none;
@@ -58,9 +96,13 @@ div.inplay {
 	  right:0;
 	  @include transition(width 1s, height 1s, right 1s, font-size 1s);
 	  
-	  h1 {
-		padding:.1em;		
-      }
+	  #onerule {
+		padding:.1em;			    
+	  }
+	  
+	  #onerulebox {
+		@include animation(none);	  
+	  }
 	  
 	}
 }
@@ -69,6 +111,15 @@ div.roundover {
   #nextround {
     display:block;	
   }
+  
+  #onerule {
+	padding:.1em;		
+  }
+  
+  #onerulebox {
+	@include animation(none);	  
+   }
+	  
 }
 
 #board {
@@ -78,7 +129,7 @@ div.roundover {
 	height:100%;
 	position:relative;	
 	
-	div
+	div.piece
 	{
 	  position: absolute;
 	  padding: .2em;
@@ -141,7 +192,6 @@ div.roundover {
 	div.blue {
 	 color: #00F;
 	}
-
 
 	div.green {
 	 color: #0F0;

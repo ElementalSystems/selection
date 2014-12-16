@@ -1,7 +1,7 @@
 
 var game={
   status:0,
-  rounds: ['lev_col7','lev_col6','lev_col5','lev_col4','lev_col3','lev_col1','lev_col2']
+  rounds: ['lev_col8','lev_col1','lev_col2','lev_col3','lev_col4','lev_col5','lev_col6','lev_col7']
   };
 //game status values
 // 0 - starting round
@@ -21,6 +21,8 @@ function start()
   game.oneRuleSpan=document.getElementById('onerule');    
   game.thisRoundSpan=document.getElementById('roundnumber');
   game.totalRoundSpan=document.getElementById('roundtotal');
+  game.goodHitIndicator=document.getElementById('goodhit');
+  game.badHitIndicator=document.getElementById('badhit');  
   game.score=0;
   game.round=-1;
   game.roundcount=game.rounds.length;
@@ -53,17 +55,33 @@ function setScoreboard()
 }
 
 
+function centerIndicator(x,y,ind)
+{
+  ind.style.left=(x-ind.offsetWidth/2)+'px';
+  ind.style.top=(y-ind.offsetHeight/2)+'px';
+  if (ind.classList.contains('active'))
+    ind.classList.remove('active');
+  setTimeout(function(){
+    ind.classList.add('active');	
+  },10);
+}
+
 function TargetClicked(event)
 {
   game.board.removeChild(event.currentTarget);
   game.score+=1;
   game.foundCount+=1;
+  
+  centerIndicator(event.clientX,event.clientY,game.goodHitIndicator);
+  
 }
 
 function NonTargetClicked(event)
 {
   game.score-=1;
   game.board.removeChild(event.currentTarget);
+  centerIndicator(event.clientX,event.clientY,game.badHitIndicator);
+
 }
 
 function timerTick()
@@ -123,6 +141,11 @@ function createLevel(level)
 		   nitem.onmousedown=NonTargetClicked;		 
        }	   
    }
+   game.board.appendChild(game.goodHitIndicator);
+   game.board.appendChild(game.badHitIndicator);
+   game.goodHitIndicator=document.getElementById('goodhit');
+   game.badHitIndicator=document.getElementById('badhit');  
+   
    setTimeout(timerTick,10);
    if (game.holder.classList.contains('roundover'))
 		  game.holder.classList.remove('roundover');
