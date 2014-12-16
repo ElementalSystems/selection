@@ -1,7 +1,8 @@
 <html>
   <head>
     <title>Selection</title>
-	 <link rel="stylesheet" type="text/css" href="selection.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<link rel="stylesheet" type="text/css" href="selection.css">
   </head>
   <body onload=start()>
   <div id=game>
@@ -9,7 +10,7 @@
     <h3>Selection Task</h3>
 	<h2>Score <span id=score>0</span></h2>
 	<h2>Round <span id=roundnumber>0</span> / <span id=roundtotal>0</span></h2>	
-	<h1 id=onerule></h1>
+	<div id=onerulebox><span>one rule<span><h1 id=onerule></h1><div>
 	<h2>Complete <span id=foundcount>0</span> / <span id=totalcount>0</span></h2>
 	<h2><span id=timeprompt>Time</span> <span id=timeleft>0</span></h2>	
 	<a id=nextround onclick="nextRound()" href="#">Next Round</a>		
@@ -17,34 +18,74 @@
 	<div id=board>	  
 	</div>
 	<div id=lev_col1 class=leveldefinition data-difficulty=1>
-	  <div class="rule">Select the words that read 'RED'</div>
-	  <div class="piece red hrollfast target" data-duplicate-count=5><b>R</b>ed</div>
-	  <div class="piece green hrollslowx target" data-duplicate-count=3><b>R</b>ed</div>
-	  <div class="piece blue bounceslow target" data-duplicate-count=2><b>R</b>ed</div>
-	  <div class="piece green hrollfastx" data-duplicate-count=5><b>G</b>reen</div>
-	  <div class="piece red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece blue bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece red bouncefastx" data-duplicate-count=5><b>G</b>reen</div>
+	  <div class="rule">Select the words that read 'Red'</div>
+	  <div class="piece red bk_red hrollfast target" data-duplicate-count=5><b>R</b>ed</div>
+	  <div class="piece green bk_green hrollslowx target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece blue bk_blue bounceslow target" data-duplicate-count=2><b>R</b>ed</div>
+	  <div class="piece green bk_green hrollfastx" data-duplicate-count=5><b>G</b>reen</div>
+	  <div class="piece red bk_red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece blue bk_blue bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece red bk_red bouncefastx" data-duplicate-count=5><b>G</b>reen</div>
 	</div>
 	<div id=lev_col2 class=leveldefinition data-difficulty=1>
 	  <div class="rule">Select the words whose text is coloured green</div>
-	  <div class="piece red hrollfast" data-duplicate-count=5><b>R</b>ed</div>
-	  <div class="piece green hrollslowx target" data-duplicate-count=3><b>R</b>ed</div>
-	  <div class="piece blue bounceslow" data-duplicate-count=2><b>R</b>ed</div>
-	  <div class="piece green hrollfastx target" data-duplicate-count=2><b>G</b>reen</div>
-	  <div class="piece red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece green bounceslowx target" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece red bouncefastx" data-duplicate-count=5><b>G</b>reen</div>
+	  <div class="piece red bk_red hrollfast" data-duplicate-count=5><b>R</b>ed</div>
+	  <div class="piece green bk_green hrollslowx target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece blue bk_blue bounceslow" data-duplicate-count=2><b>R</b>ed</div>
+	  <div class="piece green bk_green hrollfastx target" data-duplicate-count=2><b>G</b>reen</div>
+	  <div class="piece red bk_red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece green bk_green bounceslowx target" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece red bk_red bouncefastx" data-duplicate-count=5><b>G</b>reen</div>
 	</div>
 	<div id=lev_col3 class=leveldefinition data-difficulty=1>
-	  <div class="rule">Select the words whose text is coloured blue</div>
-	  <div class="piece red hrollfast" data-duplicate-count=5><b>R</b>ed</div>
-	  <div class="piece green hrollslowx target" data-duplicate-count=3><b>R</b>ed</div>
-	  <div class="piece blue bounceslow" data-duplicate-count=2><b>R</b>ed</div>
-	  <div class="piece green hrollfastx target" data-duplicate-count=2><b>G</b>reen</div>
-	  <div class="piece red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece green bounceslowx target" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece red bouncefastx" data-duplicate-count=5><b>G</b>reen</div>
+	  <div class="rule">Select the words whose text is coloured blue </div>
+	  <div class="piece red bk_red hrollfast" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece green bk_green hrollslowx" data-duplicate-count=3><b>B</b>lue</div>
+	  <div class="piece blue bk_blue bounceslow target" data-duplicate-count=5><b>R</b>ed</div>
+	  <div class="piece green bk_green hrollfastx" data-duplicate-count=2><b>G</b>reen</div>
+	  <div class="piece red bk_red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece blue bk_blue bouncefastx target" data-duplicate-count=5><b>G</b>reen</div>
+	</div>
+	<div id=lev_col4 class=leveldefinition data-difficulty=2>
+	  <div class="rule">Select the words which read 'Green'</div>
+	  <div class="piece red bk_red hrollfast target" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece blue bk_blue hrollslowx" data-duplicate-count=2><b>B</b>lue</div>
+	  <div class="piece blue bk_blue bounceslow target" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece green bk_green hrollfastx" data-duplicate-count=2><b>B</b>een</div>
+	  <div class="piece red bk_red bouncefast" data-duplicate-count=5><b>G</b>lue</div>
+	  <div class="piece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece blue bk_blue hrollslow target" data-duplicate-count=4><b>G</b>reen</div>
+	</div>
+	<div id=lev_col5 class=leveldefinition data-difficulty=2>
+	  <div class="rule">Select the words with blue backgrounds</div>
+	  <div class="piece green bk_red hrollfast" data-duplicate-count=7><b>G</b>reen</div>
+	  <div class="piece blue bk_blue hrollslowx target" data-duplicate-count=3><b>B</b>lue</div>
+	  <div class="piece blue bk_green bounceslow" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece green bk_blue hrollfastx target" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece red bk_green bouncefast" data-duplicate-count=5><b>G</b>lue</div>
+	  <div class="piece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece red bk_blue hrollslow target" data-duplicate-count=4><b>G</b>reen</div>
+	</div>
+	<div id=lev_col6 class=leveldefinition data-difficulty=2>
+	  <div class="rule">Select the words with text in blue</div>
+	  <div class="piece green bk_red hrollfast" data-duplicate-count=7><b>G</b>reen</div>
+	  <div class="piece blue bk_blue hrollslowx target" data-duplicate-count=3><b>B</b>lue</div>
+	  <div class="piece blue bk_green bounceslow target" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece green bk_blue hrollfastx" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece blue bk_red bouncefast target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece red bk_blue hrollslow" data-duplicate-count=4><b>G</b>reen</div>
+	</div>
+	<div id=lev_col7 class=leveldefinition data-difficulty=2>
+	  <div class="rule">Select the words with text in red</div>
+	  <div class="piece green bk_red hrollfast" data-duplicate-count=7><b>G</b>reen</div>
+	  <div class="piece blue bk_blue hrollslowx" data-duplicate-count=3><b>B</b>lue</div>
+	  <div class="piece blue bk_green bounceslow" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece red bk_blue hrollfastx target" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece red bk_red bouncefast target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece red bk_blue hrollslow target" data-duplicate-count=4><b>G</b>reen</div>
 	</div>
   </div>
   </body>

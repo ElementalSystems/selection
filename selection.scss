@@ -136,24 +136,29 @@ div.roundover {
 
 	div.red {
 	 color: #F00;
-	 box-shadow: 0px 0px 50px 10px #800 inset;
 	}
-
-	div.red:hover{
-	 box-shadow: 0px 0px 100px 10px #800 inset;
-	}
-
 
 	div.blue {
 	 color: #00F;
-	 box-shadow: 0px 0px 50px 10px #008 inset;
 	}
 
 
 	div.green {
 	 color: #0F0;
+	}
+    
+	div.bk_red {
+	 box-shadow: 0px 0px 50px 10px #800 inset;
+	}
+
+	div.bk_blue {
+	 box-shadow: 0px 0px 50px 10px #008 inset;
+	}
+
+
+	div.bk_green {
 	 box-shadow: 0px 0px 50px 10px #080 inset;
-	}		
+	}	
 }
 
 div.leveldefinition {

@@ -1,7 +1,7 @@
 
 var game={
   status:0,
-  rounds: ['lev_col1','lev_col2']
+  rounds: ['lev_col7','lev_col6','lev_col5','lev_col4','lev_col3','lev_col1','lev_col2']
   };
 //game status values
 // 0 - starting round
@@ -19,6 +19,8 @@ function start()
   game.timeLeftSpan=document.getElementById('timeleft');  
   game.timePrompt=document.getElementById('timeprompt');  
   game.oneRuleSpan=document.getElementById('onerule');    
+  game.thisRoundSpan=document.getElementById('roundnumber');
+  game.totalRoundSpan=document.getElementById('roundtotal');
   game.score=0;
   game.round=-1;
   game.roundcount=game.rounds.length;
@@ -29,11 +31,15 @@ function nextRound()
 {
   game.round+=1;
   createLevel(game.rounds[game.round]);
+  	
 }
 
 function setScoreboard()
 {
   game.scoreSpan.innerHTML=Number(game.score);
+  game.thisRoundSpan.innerHTML=Number(game.round+1);
+  game.totalRoundSpan.innerHTML=Number(game.rounds.length);
+  
   game.foundCountSpan.innerHTML=Number(game.foundCount);
   game.totalCountSpan.innerHTML=Number(game.totalCount);
   if (game.status==0) {
@@ -74,7 +80,7 @@ function timerTick()
      }
    }
    else if (game.status==1) {
-     if (game.timeNow>game.timeEnd) { //start of round
+     if ((game.timeNow>game.timeEnd)||(game.foundCount>=game.totalCount)) { //start of round
 	    if (game.holder.classList.contains('inplay'))
 		  game.holder.classList.remove('inplay');
 		if (!game.holder.classList.contains('roundover'))
@@ -118,6 +124,9 @@ function createLevel(level)
        }	   
    }
    setTimeout(timerTick,10);
+   if (game.holder.classList.contains('roundover'))
+		  game.holder.classList.remove('roundover');
+	
 }
 
 

@@ -303,15 +303,16 @@ div.roundover #nextround {
     -o-animation: hroll 4s linear infinite;
     animation: hroll 4s linear infinite; }
   #board div.red {
-    color: #F00;
-    box-shadow: 0px 0px 50px 10px #800 inset; }
-  #board div.red:hover {
-    box-shadow: 0px 0px 100px 10px #800 inset; }
+    color: #F00; }
   #board div.blue {
-    color: #00F;
-    box-shadow: 0px 0px 50px 10px #008 inset; }
+    color: #00F; }
   #board div.green {
-    color: #0F0;
+    color: #0F0; }
+  #board div.bk_red {
+    box-shadow: 0px 0px 50px 10px #800 inset; }
+  #board div.bk_blue {
+    box-shadow: 0px 0px 50px 10px #008 inset; }
+  #board div.bk_green {
     box-shadow: 0px 0px 50px 10px #080 inset; }
 
 div.leveldefinition {
