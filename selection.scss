@@ -11,16 +11,43 @@ body {
     user-select: none;
 	}
 
+	
+#gamesummary {
+  color: #FFF;
+  background-color:#00A;
+  padding: 0em;
+  position: absolute;    
+  z-index:  1010;
+  width:100%;
+  height:100%;
+  font-size:100%;
+  display:none;
+}
+
+#start {
+  color: #FFF;
+  background-color:#00A;
+  padding: 0em;
+  position: absolute;    
+  z-index:  1010;
+  width:100%;
+  height:100%;
+  font-size:100%;
+  display:none;
+}
+
 div.ctloverlay {
   color: #FFF;
   background-color:#333;
-  padding: 1em;
-  position: absolute;  
-  right:5%;
+  padding: 0em;
+  position: absolute;    
   z-index:  1000;
-  width: 90%;
+  width:100%;
+  height:100%;
   opacity: .9;
   font-size:100%;
+  margin:0;
+  right:0;
   @include transition(width 1s, height 1s, right 1s, font-size 1s);  
   text-align: center;
   
@@ -40,6 +67,10 @@ div.ctloverlay {
 	padding:0;
 	border-radius: 1em;
 	border: 1px #FFF solid;	
+	max-width:30em;
+	margin-left:auto;
+	margin-right:auto;
+	
 	@include animation(throb 1s linear infinite);	  
   }
   
@@ -54,10 +85,88 @@ div.ctloverlay {
     font-size: 200%;
 	color: #FFF;
 	border: 1px #FFF solid;
+	max-width: 15em;
+	padding: 1em;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+	
     text-decoration: none;
     display:none;	
   }
+  
+  #showsummary {
+    font-size: 200%;
+	color: #FFF;
+	border: 1px #FFF solid;	
+	max-width: 15em;
+	padding: 1em;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+	display:none;	
+    text-decoration: none;  
+  }
+  
 }
+
+div.summary {
+  #gamesummary {
+    display:block;
+  }
+}
+
+div.start {
+  #start {
+    display:block;
+  }
+}
+div.inplay {
+	div.ctloverlay{
+	  pointer-events:none;
+	  font-size: 60%;
+	  width:20%;
+	  height: auto;
+	  opacity: .7;
+	  @include transition(width 1s, height 1s, font-size 1s);
+	  
+	  #onerule {
+		padding:.1em;			    
+	  }
+	  
+	  #onerulebox {
+		@include animation(none);	  
+	  }
+	  
+	}
+}
+
+div.roundover {
+  #nextround {
+    display:block;	
+  }
+  
+  #onerule {
+	padding:.1em;		
+  }
+  
+  #onerulebox {
+	@include animation(none);
+   }
+	  
+}
+
+div.roundover.gameover {
+  #nextround {
+    display:none;	
+  }
+  
+  #showsummary {
+    display:block;	
+  }
+   
+}
+
 
 div.indicator {
   font-size: 500%;
@@ -84,42 +193,6 @@ div.indicator.active {
   @include transform(scale(3,3));
   @include transition(opacity 1s, transform 1s);
   display:block;  
-}
-
-
-div.inplay {
-	div.ctloverlay{
-	  pointer-events:none;
-	  font-size: 60%;
-	  width:20%;
-	  opacity: .7;
-	  right:0;
-	  @include transition(width 1s, height 1s, right 1s, font-size 1s);
-	  
-	  #onerule {
-		padding:.1em;			    
-	  }
-	  
-	  #onerulebox {
-		@include animation(none);	  
-	  }
-	  
-	}
-}
-
-div.roundover {
-  #nextround {
-    display:block;	
-  }
-  
-  #onerule {
-	padding:.1em;		
-  }
-  
-  #onerulebox {
-	@include animation(none);	  
-   }
-	  
 }
 
 #board {
@@ -214,3 +287,4 @@ div.roundover {
 div.leveldefinition {
   display:none;
 }
+

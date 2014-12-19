@@ -1,16 +1,16 @@
 
-var game={
-  status:0,
-  rounds: ['lev_col3','lev_col4','lev_col6','lev_col7','lev_col8']
-  };
+var game={};
 //game status values
 // 0 - starting round
 // 1 - end play
 // 2 - end of round
 
-function start()
+function start(levelselectors,medalscore)
 {
-  
+  game.status=0
+  game.medals=medalscore;
+  game.rounds=generateLines(levelselectors);
+  //execute generator from parameters
   game.holder=document.getElementById('game');
   game.board=document.getElementById('board');
   game.scoreSpan=document.getElementById('score');
@@ -26,15 +26,48 @@ function start()
   game.score=0;
   game.round=-1;
   game.roundcount=game.rounds.length;
+  
+  if (game.holder.classList.contains('start'))
+	  game.holder.classList.remove('start');	
+  
+  
   nextRound()
+}
+
+function generateLines(selectors)
+{
+  var rounds=[];
+  for (var i=0;i<selectors.length;i+=1) {
+    var full=".leveldefinition"+selectors[i];
+    var list=document.querySelectorAll(full);    
+	var ch=Math.floor(Math.random()*list.length);
+	rounds.push(list[ch].id);
+  }
+  return rounds;
 }
 
 function nextRound()
 {
   game.round+=1;
+  
   createLevel(game.rounds[game.round]);
   	
 }
+
+function showSummary()
+{
+	if (!game.holder.classList.contains('summary'))
+		  game.holder.classList.add('summary');	
+}
+
+function showStart()
+{
+    if (game.holder.classList.contains('summary'))
+		  game.holder.classList.remove('summary');	
+	if (!game.holder.classList.contains('start'))
+		  game.holder.classList.add('start');	
+}
+
 
 function setScoreboard()
 {
@@ -94,7 +127,9 @@ function timerTick()
 		  game.holder.classList.add('inplay');
 		if (game.holder.classList.contains('roundover'))
 		  game.holder.classList.remove('roundover');
-		game.status=1; //inplay now
+		if (game.holder.classList.contains('gameover'))
+		  game.holder.classList.remove('gameover');
+		game.status=1; //in play now
      }
    }
    else if (game.status==1) {
@@ -103,6 +138,10 @@ function timerTick()
 		  game.holder.classList.remove('inplay');
 		if (!game.holder.classList.contains('roundover'))
 		  game.holder.classList.add('roundover');		  
+		if (game.round==game.rounds.length-1) 
+		  if (!game.holder.classList.contains('gameover'))
+		    game.holder.classList.add('gameover');		  
+		
 		game.status=2;//game ended
      }
   }
