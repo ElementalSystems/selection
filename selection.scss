@@ -205,12 +205,26 @@ div.indicator.active {
 	div.piece
 	{
 	  position: absolute;
-	  padding: .2em;
 	  color: #FFF;  
 	  font-size: 200%;
+	  cursor:pointer;      
+	}
+	
+	div.piece.colpiece
+	{
+	  position: absolute;
+	  padding: .2em;
 	  font-variant: small-caps;
-	  border-radius: 40%;
-      cursor:pointer;      
+	  border-radius: 40%;      
+	}
+	
+	div.piece.wordpiece
+	{
+	  position: absolute;
+	  padding: .2em;
+	  color:#000;
+	  background-color: #AAA;
+	  border: 5px inset #AAA;      
 	}
 	
 	b {
@@ -256,6 +270,46 @@ div.indicator.active {
 	div.hrollfastx
 	{
 	  @include animation(hroll 4s linear infinite);	  
+	}
+	
+	div.hslidethrob
+	{
+	  @include animation(hslidethrob 6s ease infinite alternate);	  
+	}
+
+	div.hslidethrobx
+	{
+	  @include animation(hslidethrob 7s ease infinite alternate);	  
+	}
+
+	div.hfslidethrob
+	{
+	  @include animation(hslidethrob 2s ease infinite alternate);	  
+	}
+
+	div.hfslidethrobx
+	{
+	  @include animation(hslidethrob 2.5s ease infinite alternate);	  
+	}
+
+	div.vslidethrob
+	{
+	  @include animation(vslidethrob 6s ease infinite alternate);	  
+	}
+
+	div.vslidethrobx
+	{
+	  @include animation(vslidethrob 7s ease infinite alternate);	  
+	}
+
+	div.vfslidethrob
+	{
+	  @include animation(vslidethrob 2s ease infinite alternate);	  
+	}
+
+	div.vfslidethrobx
+	{
+	  @include animation(vslidethrob 2.5s ease infinite alternate);	  
 	}
 
 	div.red {

@@ -41,7 +41,7 @@ function generateRounds(selectors)
     var full=".leveldefinition"+selectors[i];
     var list=document.querySelectorAll(full);    
 	var ch=Math.floor(Math.random()*list.length);
-	rounds.push(list[ch].id);
+	rounds.push(list[ch]);
   }
   return rounds;
 }
@@ -76,7 +76,7 @@ function showSummary()
 	  mClass='bronze';
 	  mText='Bronze Medal';	  
 	}
-	document.getElementById('gs_medal').innerHTML=Number(mText);
+	document.getElementById('gs_medal').innerHTML=mText;
 	
 	var sum=document.getElementById('gamesummary');
 	if (sum.classList.contains('gold')) sum.classList.remove('gold');
@@ -174,9 +174,8 @@ function timerTick()
   setTimeout(timerTick,500);    
 }
 
-function createLevel(level)
+function createLevel(lev)
 {
-   var lev=document.getElementById(level);   
    var items=lev.getElementsByClassName('piece');
    game.oneRuleSpan.innerHTML=lev.getElementsByClassName('rule')[0].innerHTML;
    game.levelDefinition=lev;

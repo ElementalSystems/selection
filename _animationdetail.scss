@@ -62,3 +62,40 @@
   }
 };
 
+
+@include keyframes('hslidethrob') {
+  0% { 
+    left: -10%;
+    @include transform(scale(.6,.6));
+  }
+  
+  
+  50% { 
+	left: 0%;
+    @include transform(scale(1,1));
+  }
+  
+  100% { 
+	left: 10%;
+    @include transform(scale(.6,.6));
+  }
+};
+
+
+@include keyframes('vslidethrob') {
+  0% { 
+    top: -10%;
+    @include transform(scale(.6,.6));
+  }
+  
+  
+  50% { 
+	top: 0%;
+    @include transform(scale(1,1));
+  }
+  
+  100% { 
+	top: 10%;
+    @include transform(scale(.6,.6));
+  }
+};

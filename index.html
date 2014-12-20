@@ -8,8 +8,11 @@
   <div id=game class=start>
     <div id=start>
 	  <div>Selection Task</div>
-	  <a id=gs_newgame onclick="start(['.col.d1','.col.d1','.col.d2','.col.d2','.col.d3'],[45,48,50])" href="#">Play Colour Easy</a>			 	  
-	  <a id=gs_newgame onclick="start(['.col.d2','.col.d3','.col.d3','.col.d4','.col.d4'],[45,48,50])" href="#">Play Colour Medium</a>			 	  
+	  <a class=gs_newgame onclick="start(['.col.d1','.col.d1','.col.d2','.col.d2','.col.d3'],[45,48,50])" href="#">Play Colour Easy</a>			 	  
+	  <a class=gs_newgame onclick="start(['.col.d2','.col.d3','.col.d3','.col.d4','.col.d4'],[45,48,50])" href="#">Play Colour Medium</a>			 	  
+	  <a class=gs_newgame onclick="start(['.words.d1','.words.d1','.words.d2','.words.d2','.words.d3'],[35,45,50])" href="#">Play Words Easy</a>			 	  
+	  <a class=gs_newgame onclick="start(['.words.d2','.words.d3','.words.d3','.words.d4','.words.d4'],[35,45,50])" href="#">Play Words Medium</a>			 	  
+	  <a class=gs_newgame onclick="start(['.test','.test'],[5,10,15])" href="#">Play TEST</a>			 	  
 	</div>
 	
 	<div id=gamesummary>
@@ -39,96 +42,344 @@
 	
 	
 	
-	<div id=lev_col1 class="leveldefinition d1 col">
+	<div class="leveldefinition d1 col">
 	  <div class="rule">Select the words that read 'Red'</div>
-	  <div class="piece red bk_red hrollfast target" data-duplicate-count=5><b>R</b>ed</div>
-	  <div class="piece green bk_green hrollslowx target" data-duplicate-count=3><b>R</b>ed</div>
-	  <div class="piece blue bk_blue bounceslow target" data-duplicate-count=2><b>R</b>ed</div>
-	  <div class="piece green bk_green hrollfastx" data-duplicate-count=5><b>G</b>reen</div>
-	  <div class="piece red bk_red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece blue bk_blue bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece red bk_red bouncefastx" data-duplicate-count=5><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red hrollfast target" data-duplicate-count=5><b>R</b>ed</div>
+	  <div class="piece colpiece green bk_green hrollslowx target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece colpiece blue bk_blue bounceslow target" data-duplicate-count=2><b>R</b>ed</div>
+	  <div class="piece colpiece green bk_green hrollfastx" data-duplicate-count=5><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_blue bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece red bk_red bouncefastx" data-duplicate-count=5><b>G</b>reen</div>
 	</div>
-	<div id=lev_col2 class="leveldefinition d1 col">
+	<div class="leveldefinition d1 col">
 	  <div class="rule">Select the words whose text is coloured green</div>
-	  <div class="piece red bk_red hrollfast" data-duplicate-count=5><b>R</b>ed</div>
-	  <div class="piece green bk_green hrollslowx target" data-duplicate-count=3><b>R</b>ed</div>
-	  <div class="piece blue bk_blue bounceslow" data-duplicate-count=2><b>R</b>ed</div>
-	  <div class="piece green bk_green hrollfastx target" data-duplicate-count=2><b>G</b>reen</div>
-	  <div class="piece red bk_red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece green bk_green bounceslowx target" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece red bk_red bouncefastx" data-duplicate-count=5><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red hrollfast" data-duplicate-count=5><b>R</b>ed</div>
+	  <div class="piece colpiece green bk_green hrollslowx target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece colpiece blue bk_blue bounceslow" data-duplicate-count=2><b>R</b>ed</div>
+	  <div class="piece colpiece green bk_green hrollfastx target" data-duplicate-count=2><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece green bk_green bounceslowx target" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece red bk_red bouncefastx" data-duplicate-count=5><b>G</b>reen</div>
 	</div>
-	<div id=lev_col3 class="leveldefinition  d1 col">
+	<div class="leveldefinition  d1 col">
 	  <div class="rule">Select the words whose text is coloured blue </div>
-	  <div class="piece red bk_red hrollfast" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece green bk_green hrollslowx" data-duplicate-count=3><b>B</b>lue</div>
-	  <div class="piece blue bk_blue bounceslow target" data-duplicate-count=5><b>R</b>ed</div>
-	  <div class="piece green bk_green hrollfastx" data-duplicate-count=2><b>G</b>reen</div>
-	  <div class="piece red bk_red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece blue bk_blue bouncefastx target" data-duplicate-count=5><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red hrollfast" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece green bk_green hrollslowx" data-duplicate-count=3><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_blue bounceslow target" data-duplicate-count=5><b>R</b>ed</div>
+	  <div class="piece colpiece green bk_green hrollfastx" data-duplicate-count=2><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red bouncefast" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_blue bouncefastx target" data-duplicate-count=5><b>G</b>reen</div>
 	</div>
-	<div id=lev_col4 class="leveldefinition  d2 col">
+	<div class="leveldefinition  d2 col">
 	  <div class="rule">Select the words which read 'Green'</div>
-	  <div class="piece red bk_red hrollfast target" data-duplicate-count=3><b>G</b>reen</div>
-	  <div class="piece blue bk_blue hrollslowx" data-duplicate-count=2><b>B</b>lue</div>
-	  <div class="piece blue bk_blue bounceslow target" data-duplicate-count=3><b>G</b>reen</div>
-	  <div class="piece green bk_green hrollfastx" data-duplicate-count=2><b>B</b>een</div>
-	  <div class="piece red bk_red bouncefast" data-duplicate-count=5><b>G</b>lue</div>
-	  <div class="piece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece blue bk_blue hrollslow target" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red hrollfast target" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece colpiece blue bk_blue hrollslowx" data-duplicate-count=2><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_blue bounceslow target" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece colpiece green bk_green hrollfastx" data-duplicate-count=2><b>B</b>een</div>
+	  <div class="piece colpiece red bk_red bouncefast" data-duplicate-count=5><b>G</b>lue</div>
+	  <div class="piece colpiece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_blue hrollslow target" data-duplicate-count=4><b>G</b>reen</div>
 	</div>
-	<div id=lev_col5 class="leveldefinition d2 col">
+	<div class="leveldefinition d2 col">
 	  <div class="rule">Select the words with blue backgrounds</div>
-	  <div class="piece green bk_red hrollfast" data-duplicate-count=7><b>G</b>reen</div>
-	  <div class="piece blue bk_blue hrollslowx target" data-duplicate-count=3><b>B</b>lue</div>
-	  <div class="piece blue bk_green bounceslow" data-duplicate-count=3><b>G</b>reen</div>
-	  <div class="piece green bk_blue hrollfastx target" data-duplicate-count=3><b>G</b>reen</div>
-	  <div class="piece red bk_green bouncefast" data-duplicate-count=5><b>G</b>lue</div>
-	  <div class="piece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece red bk_blue hrollslow target" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece green bk_red hrollfast" data-duplicate-count=7><b>G</b>reen</div>
+	  <div class="piece colpiece blue bk_blue hrollslowx target" data-duplicate-count=3><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_green bounceslow" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece colpiece green bk_blue hrollfastx target" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_green bouncefast" data-duplicate-count=5><b>G</b>lue</div>
+	  <div class="piece colpiece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece red bk_blue hrollslow target" data-duplicate-count=4><b>G</b>reen</div>
 	</div>
-	<div id=lev_col6 class="leveldefinition d2 col">
+	<div class="leveldefinition d2 col">
 	  <div class="rule">Select the words with text in blue</div>
-	  <div class="piece green bk_red hrollfast" data-duplicate-count=7><b>G</b>reen</div>
-	  <div class="piece blue bk_blue hrollslowx target" data-duplicate-count=3><b>B</b>lue</div>
-	  <div class="piece blue bk_green bounceslow target" data-duplicate-count=4><b>G</b>reen</div>
-	  <div class="piece green bk_blue hrollfastx" data-duplicate-count=3><b>G</b>reen</div>
-	  <div class="piece blue bk_red bouncefast target" data-duplicate-count=3><b>R</b>ed</div>
-	  <div class="piece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece red bk_blue hrollslow" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece green bk_red hrollfast" data-duplicate-count=7><b>G</b>reen</div>
+	  <div class="piece colpiece blue bk_blue hrollslowx target" data-duplicate-count=3><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_green bounceslow target" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece green bk_blue hrollfastx" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece colpiece blue bk_red bouncefast target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece colpiece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece red bk_blue hrollslow" data-duplicate-count=4><b>G</b>reen</div>
 	</div>
-	<div id=lev_col7 class="leveldefinition d2 col">
+	<div class="leveldefinition d2 col">
 	  <div class="rule">Select the words with text in red</div>
-	  <div class="piece green bk_red hrollfast" data-duplicate-count=7><b>G</b>reen</div>
-	  <div class="piece blue bk_blue hrollslowx" data-duplicate-count=3><b>B</b>lue</div>
-	  <div class="piece blue bk_green bounceslow" data-duplicate-count=4><b>G</b>reen</div>
-	  <div class="piece red bk_blue hrollfastx target" data-duplicate-count=3><b>G</b>reen</div>
-	  <div class="piece red bk_red bouncefast target" data-duplicate-count=3><b>R</b>ed</div>
-	  <div class="piece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece red bk_blue hrollslow target" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece green bk_red hrollfast" data-duplicate-count=7><b>G</b>reen</div>
+	  <div class="piece colpiece blue bk_blue hrollslowx" data-duplicate-count=3><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_green bounceslow" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_blue hrollfastx target" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red bouncefast target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece colpiece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece red bk_blue hrollslow target" data-duplicate-count=4><b>G</b>reen</div>
 	</div>
-	<div id=lev_col8 class="leveldefinition d3 col">
+	<div class="leveldefinition d3 col">
 	  <div class="rule">Select the words which describe the text colour</div>
-	  <div class="piece green bk_green hrollfast target" data-duplicate-count=4><b>G</b>reen</div>
-	  <div class="piece blue bk_blue hrollslowx target" data-duplicate-count=3><b>B</b>lue</div>
-	  <div class="piece blue bk_blue bounceslow" data-duplicate-count=4><b>G</b>reen</div>
-	  <div class="piece red bk_red hrollfastx" data-duplicate-count=3><b>G</b>reen</div>
-	  <div class="piece red bk_red bouncefast target" data-duplicate-count=3><b>R</b>ed</div>
-	  <div class="piece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece blue bk_blue hrollslow" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece green bk_green hrollfast target" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece blue bk_blue hrollslowx target" data-duplicate-count=3><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_blue bounceslow" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red hrollfastx" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red bouncefast target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece colpiece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_blue hrollslow" data-duplicate-count=4><b>G</b>reen</div>
 	</div>
-	<div id=lev_col9 class="leveldefinition d4 col">
+	<div class="leveldefinition d3 col">
 	  <div class="rule">Select the words which describe the text colour</div>
-	  <div class="piece green bk_red hrollfast target" data-duplicate-count=4><b>G</b>reen</div>
-	  <div class="piece blue bk_green hrollslowx target" data-duplicate-count=3><b>B</b>lue</div>
-	  <div class="piece blue bk_green bounceslow" data-duplicate-count=4><b>G</b>reen</div>
-	  <div class="piece red bk_green hrollfastx" data-duplicate-count=3><b>G</b>reen</div>
-	  <div class="piece red bk_blue bouncefast target" data-duplicate-count=3><b>R</b>ed</div>
-	  <div class="piece green bk_red bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
-	  <div class="piece blue bk_blue hrollslow" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red hrollfast target" data-duplicate-count=4><b>R</b>ed</div>
+	  <div class="piece colpiece green bk_red hrollslowx" data-duplicate-count=3><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_red bounceslow" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red hrollfastx target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece colpiece red bk_red bouncefast target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece colpiece green bk_red bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_red hrollslow" data-duplicate-count=4><b>G</b>reen</div>
 	</div>
+	<div class="leveldefinition d3 col">
+	  <div class="rule">Select the words which describe the text colour</div>
+	  <div class="piece colpiece green bk_blue hrollfast target" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece green bk_red hrollfast target" data-duplicate-count=2><b>G</b>reen</div>
+	  <div class="piece colpiece blue bk_green hrollslowx" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece colpiece blue bk_green bounceslow" data-duplicate-count=4><b>G</b>reed</div>
+	  <div class="piece colpiece red bk_red hrollfastx" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece colpiece green bk_green bouncefast" data-duplicate-count=8><b>C</b>ream</div>
+	  <div class="piece colpiece green bk_red bounceslowx target" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece blue bk_green hrollslow" data-duplicate-count=4><b>G</b>reen</div>
+	</div>
+	<div class="leveldefinition d4 col">
+	  <div class="rule">Select the words which describe the text colour</div>
+	  <div class="piece colpiece green bk_red hrollfast target" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece blue bk_green hrollslowx target" data-duplicate-count=3><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_green bounceslow" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_green hrollfastx" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_blue bouncefast target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece colpiece green bk_red bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_blue hrollslow" data-duplicate-count=4><b>G</b>reen</div>
+	</div>
+	<div class="leveldefinition d4 col">
+	  <div class="rule">Select the words which describe the background colour</div>
+	  <div class="piece colpiece green bk_red hrollfast" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece blue bk_green hrollslowx" data-duplicate-count=3><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_green bounceslow target" data-duplicate-count=2><b>G</b>reen</div>
+	  <div class="piece colpiece blue bk_red hrollslow target" data-duplicate-count=2><b>R</b>ed</div>
+	  <div class="piece colpiece red bk_green hrollfastx target" data-duplicate-count=2><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_blue bouncefast" data-duplicate-count=6><b>R</b>ed</div>
+	  <div class="piece colpiece green bk_red bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece green bk_blue hrollslow target" data-duplicate-count=5><b>B</b>lue</div>
+	</div>
+	<div class="leveldefinition d4 col">
+	  <div class="rule">Select the words which describe the text colour</div>
+	  <div class="piece colpiece green bk_green hrollfast target" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece green bk_green hrollfastx" data-duplicate-count=4><b>C</b>ream</div>
+	  <div class="piece colpiece blue bk_blue hrollslowx target" data-duplicate-count=3><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_blue hrollslow" data-duplicate-count=3><b>P</b>lum</div>
+	  <div class="piece colpiece blue bk_blue bounceslow" data-duplicate-count=4><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red hrollfastx" data-duplicate-count=3><b>G</b>reen</div>
+	  <div class="piece colpiece red bk_red bouncefast target" data-duplicate-count=3><b>R</b>ed</div>
+	  <div class="piece colpiece red bk_red bouncefast" data-duplicate-count=3><b>T</b>an</div>
+	  <div class="piece colpiece green bk_green bounceslowx" data-duplicate-count=5><b>B</b>lue</div>
+	  <div class="piece colpiece blue bk_blue hrollslow" data-duplicate-count=4><b>G</b>reen</div>
+	</div>
+	
+	<div class="leveldefinition d1 words">
+	  <div class="rule">Select the Verbs</div>
+	  <div class="piece wordpiece hslidethrob target" data-duplicate-count=2>Ran</div>	  
+	  <div class="piece wordpiece hslidethrobx" data-duplicate-count=4>Turkey</div>	  
+	  <div class="piece wordpiece hfslidethrob target" data-duplicate-count=3>Eat</div>	  
+	  <div class="piece wordpiece hfslidethrobx" data-duplicate-count=4>Window</div>	  
+	  <div class="piece wordpiece hfslidethrobx" data-duplicate-count=2>Slow</div>	  
+	  <div class="piece wordpiece vslidethrob target" data-duplicate-count=2>Pray</div>	  
+	  <div class="piece wordpiece vslidethrobx" data-duplicate-count=4>Spider</div>	  	  
+	  <div class="piece wordpiece vfslidethrob target" data-duplicate-count=3>Select</div>	  
+	  <div class="piece wordpiece vfslidethrobx" data-duplicate-count=4>Sky</div>	  	  
+	</div>
+		
+	<div class="leveldefinition d1 words">
+	  <div class="rule">Select the Nouns</div>
+	  <div class="piece wordpiece hslidethrob" data-duplicate-count=5>Ran</div>	  
+	  <div class="piece wordpiece hslidethrobx target" data-duplicate-count=2>Turkey</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=3>Eat</div>	  
+	  <div class="piece wordpiece hfslidethrobx target" data-duplicate-count=2>Window</div>	  
+	  <div class="piece wordpiece vslidethrob" data-duplicate-count=5>Pray</div>	  
+	  <div class="piece wordpiece vslidethrobx target" data-duplicate-count=2>Spider</div>	  	  
+	  <div class="piece wordpiece vfslidethrob" data-duplicate-count=5>Select</div>	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Sky</div>	  	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>Angry</div>	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Universe</div>	  	  
+	</div>
+	
+	<div class="leveldefinition d1 words">
+	  <div class="rule">Select the Adjectives</div>
+	  <div class="piece wordpiece hslidethrobx" data-duplicate-count=1>Ran</div>	  
+	  <div class="piece wordpiece hslidethrobx" data-duplicate-count=2>Turkey</div>	  
+	  <div class="piece wordpiece hfslidethrob target" data-duplicate-count=3>Fast</div>	  
+	  <div class="piece wordpiece vfslidethrob target" data-duplicate-count=3>Old</div>	  
+	  <div class="piece wordpiece vslidethrob target" data-duplicate-count=2>Sexy</div>	  
+	  <div class="piece wordpiece hfslidethrobx" data-duplicate-count=2>Window</div>	  
+	  <div class="piece wordpiece vslidethrobx" data-duplicate-count=3>Pray</div>	  
+	  <div class="piece wordpiece vslidethrobx" data-duplicate-count=2>Spider</div>	  	  
+	  <div class="piece wordpiece vfslidethrobx" data-duplicate-count=3>Select</div>	  
+	  <div class="piece wordpiece vfslidethrobx" data-duplicate-count=2>Sky</div>	  	  
+	  <div class="piece wordpiece hfslidethrob target" data-duplicate-count=2>Angry</div>	  
+	  <div class="piece wordpiece vfslidethrobx" data-duplicate-count=2>Universe</div>	  	  
+	</div>	
+	
+	<div class="leveldefinition d2 words">
+	  <div class="rule">Select past tense verbs</div>
+	  <div class="piece wordpiece hslidethrob" data-duplicate-count=5>Run</div>	  
+	  <div class="piece wordpiece hslidethrobx target" data-duplicate-count=2>Ran</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=3>Eat</div>	  
+	  <div class="piece wordpiece hfslidethrobx target" data-duplicate-count=2>Ate</div>	  
+	  <div class="piece wordpiece vslidethrob" data-duplicate-count=5>Go</div>	  
+	  <div class="piece wordpiece vslidethrobx target" data-duplicate-count=2>Went</div>	  	  
+	  <div class="piece wordpiece vfslidethrob" data-duplicate-count=5>Goes</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>Going</div>	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Came</div>	  	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Posted</div>	  	  
+	</div>
+	
+
+	<div class="leveldefinition d2 words">
+	  <div class="rule">Select words that start and end with the same letter</div>
+	  <div class="piece wordpiece hslidethrob" data-duplicate-count=5>Run</div>	  
+	  <div class="piece wordpiece hslidethrobx target" data-duplicate-count=2>Runner</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=3>Eatery</div>	  
+	  <div class="piece wordpiece hfslidethrobx target" data-duplicate-count=2>Madam</div>	  
+	  <div class="piece wordpiece vslidethrob" data-duplicate-count=5>Centaurs</div>	  
+	  <div class="piece wordpiece vslidethrobx target" data-duplicate-count=2>Dented</div>	  	  
+	  <div class="piece wordpiece vfslidethrob" data-duplicate-count=5>Tented</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>Goes</div>	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Going</div>	  	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Toast</div>	  	  
+	</div>		
+	
+	<div class="leveldefinition d2 words">
+	  <div class="rule">Select words that start and end with the same letter</div>
+	  <div class="piece wordpiece hslidethrob" data-duplicate-count=5>Run</div>	  
+	  <div class="piece wordpiece hslidethrobx target" data-duplicate-count=2>Runner</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=3>Eatery</div>	  
+	  <div class="piece wordpiece hfslidethrobx target" data-duplicate-count=2>Madam</div>	  
+	  <div class="piece wordpiece vslidethrob" data-duplicate-count=5>Centaurs</div>	  
+	  <div class="piece wordpiece vslidethrobx target" data-duplicate-count=2>Dented</div>	  	  
+	  <div class="piece wordpiece vfslidethrob" data-duplicate-count=5>Tented</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>Goes</div>	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Going</div>	  	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Toast</div>	  	  
+	</div>		
+	
+	<div class="leveldefinition d2 words">
+	  <div class="rule">Select words have the letter N</div>
+	  <div class="piece wordpiece hslidethrob" data-duplicate-count=5>Rudder</div>	  
+	  <div class="piece wordpiece hslidethrobx target" data-duplicate-count=2>Runner</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=3>Eatery</div>	  
+	  <div class="piece wordpiece hfslidethrobx target" data-duplicate-count=2>Madman</div>	  
+	  <div class="piece wordpiece vslidethrob" data-duplicate-count=5>Maximum</div>	  
+	  <div class="piece wordpiece vslidethrobx target" data-duplicate-count=2>Minimum</div>	  	  
+	  <div class="piece wordpiece vfslidethrob" data-duplicate-count=5>Tested</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>Goes</div>	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Going</div>	  	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>None</div>	  	  
+	</div>		
+	
+	
+	<div class="leveldefinition d3 words">
+	  <div class="rule">Select the misspelt words</div>
+	  <div class="piece wordpiece hslidethrobx" data-duplicate-count=1>Fiend</div>	  
+	  <div class="piece wordpiece hslidethrobx" data-duplicate-count=2>Friend</div>	  
+	  <div class="piece wordpiece hfslidethrob target" data-duplicate-count=3>Freind</div>	  
+	  <div class="piece wordpiece hfslidethrobx" data-duplicate-count=2>Fined</div>	  
+	  <div class="piece wordpiece vfslidethrob target" data-duplicate-count=3>Facit</div>	  
+	  <div class="piece wordpiece hfslidethrobx" data-duplicate-count=2>Dairy</div>	  
+	  <div class="piece wordpiece vslidethrobx" data-duplicate-count=3>Diary</div>	  
+	  <div class="piece wordpiece vslidethrobx target" data-duplicate-count=2>Diety</div>	  	  
+	  <div class="piece wordpiece hfslidethrobx" data-duplicate-count=3>Deity</div>	  
+	  <div class="piece wordpiece vslidethrob" data-duplicate-count=2>Ogre</div>	  
+	  <div class="piece wordpiece vslidethrob target" data-duplicate-count=1>Oger</div>	  	  
+	  <div class="piece wordpiece vfslidethrobx" data-duplicate-count=2>Sage</div>	  	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>Mage</div>	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Kage</div>	  	  
+	  <div class="piece wordpiece vslidethrob " data-duplicate-count=2>Page</div>	  	  	  
+	</div>
+	
+	
+	<div class="leveldefinition d3 words">
+	  <div class="rule">Select the misspelt words</div>
+	  <div class="piece wordpiece hslidethrobx" data-duplicate-count=1>Their</div>	  
+	  <div class="piece wordpiece hslidethrobx" data-duplicate-count=2>There</div>	  
+	  <div class="piece wordpiece hfslidethrob target" data-duplicate-count=3>Thier</div>	  
+	  <div class="piece wordpiece hfslidethrobx" data-duplicate-count=2>Thee</div>	  
+	  <div class="piece wordpiece vfslidethrob target" data-duplicate-count=3>Theet</div>	  
+	  <div class="piece wordpiece hfslidethrobx" data-duplicate-count=2>Tweet</div>	  
+	  <div class="piece wordpiece vslidethrobx" data-duplicate-count=3>Teeth</div>	  
+	  <div class="piece wordpiece vslidethrobx target" data-duplicate-count=2>Teath</div>	  	  
+	  <div class="piece wordpiece hfslidethrobx" data-duplicate-count=3>Tether</div>	  
+	  <div class="piece wordpiece vslidethrob" data-duplicate-count=2>Tender</div>	  
+	  <div class="piece wordpiece vslidethrob target" data-duplicate-count=1>Teethering</div>	  	  
+	  <div class="piece wordpiece vfslidethrobx" data-duplicate-count=2>Here</div>	  	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>Hear</div>	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Heer</div>	  	  
+	  <div class="piece wordpiece vslidethrob " data-duplicate-count=2>Her</div>	  	  	  
+	</div>
+	
+	<div class="leveldefinition d3 words">
+	  <div class="rule">Select the misspelt words</div>
+	  <div class="piece wordpiece hslidethrobx" data-duplicate-count=1>Process</div>	  
+	  <div class="piece wordpiece hslidethrobx" data-duplicate-count=2>Processing</div>	  
+	  <div class="piece wordpiece hfslidethrob target" data-duplicate-count=2>Proceses</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>Processes</div>	  
+	  <div class="piece wordpiece hfslidethrob target" data-duplicate-count=2>Processi</div>	  
+	  <div class="piece wordpiece hfslidethrobx" data-duplicate-count=2>Night</div>	  
+	  <div class="piece wordpiece vfslidethrob target" data-duplicate-count=1>Nighte</div>	  
+	  <div class="piece wordpiece hfslidethrobx" data-duplicate-count=2>Knight</div>	  
+	  <div class="piece wordpiece vslidethrobx" data-duplicate-count=3>Length</div>	  
+	  <div class="piece wordpiece vslidethrobx target" data-duplicate-count=2>Lenght</div>	  	  
+	  <div class="piece wordpiece hfslidethrobx" data-duplicate-count=3>Height</div>	  
+	  <div class="piece wordpiece vslidethrob" data-duplicate-count=2>High</div>	  
+	  <div class="piece wordpiece vslidethrob target" data-duplicate-count=1>Hieght</div>	  	  
+	  <div class="piece wordpiece vfslidethrobx" data-duplicate-count=2>Blight</div>	  	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>Bite</div>	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Bited</div>	  	  
+	  <div class="piece wordpiece vslidethrob " data-duplicate-count=2>Bright</div>	  	  	  
+	</div>
+	
+	
+	<div class="leveldefinition d4 words">
+	  <div class="rule">Select words that Rhyme with Shoes</div>
+	  <div class="piece wordpiece hslidethrob" data-duplicate-count=5>Runners</div>	  
+	  <div class="piece wordpiece hslidethrobx target" data-duplicate-count=3>Views</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=3>Convince</div>	  
+	  <div class="piece wordpiece hfslidethrobx target" data-duplicate-count=2>Snooze</div>	  
+	  <div class="piece wordpiece vslidethrob" data-duplicate-count=5>Us</div>	  
+	  <div class="piece wordpiece vslidethrobx target" data-duplicate-count=2>Misuse</div>	  	  
+	  <div class="piece wordpiece vfslidethrob" data-duplicate-count=5>Goes</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>User</div>	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=3>Renews</div>	  	  
+	</div>
+	
+	<div class="leveldefinition d4 words">
+	  <div class="rule">Select words that Rhyme with Fruit</div>
+	  <div class="piece wordpiece hslidethrob" data-duplicate-count=5>Misuse</div>	  
+	  <div class="piece wordpiece hslidethrobx target" data-duplicate-count=3>Loot</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=3>Fright</div>	  
+	  <div class="piece wordpiece hfslidethrobx target" data-duplicate-count=2>pursuit</div>	  
+	  <div class="piece wordpiece vslidethrob" data-duplicate-count=5>Midget</div>	  
+	  <div class="piece wordpiece vslidethrobx target" data-duplicate-count=3>Salute</div>	  	  
+	  <div class="piece wordpiece vfslidethrob" data-duplicate-count=5>Freeze</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>Yeti</div>	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Pollute</div>	  	  
+	</div>
+	
+	
+	<div class="leveldefinition d4 words">
+	  <div class="rule">Select words that Rhyme with Chair</div>
+	  <div class="piece wordpiece hslidethrob" data-duplicate-count=5>Loot</div>	  
+	  <div class="piece wordpiece hslidethrobx target" data-duplicate-count=3>Bear</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=3>Char</div>	  
+	  <div class="piece wordpiece hfslidethrobx target" data-duplicate-count=2>Dare</div>	  
+	  <div class="piece wordpiece vslidethrob" data-duplicate-count=5>Cheque</div>	  
+	  <div class="piece wordpiece vslidethrobx target" data-duplicate-count=3>Aware</div>	  	  
+	  <div class="piece wordpiece vfslidethrob" data-duplicate-count=5>Weary</div>	  
+	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>User</div>	  
+	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Flair</div>	  	  
+	</div>
+	
   </div>
   </body>
   <script src="selection.js"></script>
