@@ -9,7 +9,7 @@ function start(levelselectors,medalscore)
 {
   game.status=0
   game.medals=medalscore;
-  game.rounds=generateLines(levelselectors);
+  game.rounds=generateRounds(levelselectors);
   //execute generator from parameters
   game.holder=document.getElementById('game');
   game.board=document.getElementById('board');
@@ -34,7 +34,7 @@ function start(levelselectors,medalscore)
   nextRound()
 }
 
-function generateLines(selectors)
+function generateRounds(selectors)
 {
   var rounds=[];
   for (var i=0;i<selectors.length;i+=1) {
@@ -58,6 +58,31 @@ function showSummary()
 {
 	if (!game.holder.classList.contains('summary'))
 		  game.holder.classList.add('summary');	
+    //set up fields
+	document.getElementById('gs_score').innerHTML=Number(game.score);
+	document.getElementById('gs_goldlevel').innerHTML=Number(game.medals[2]);
+	document.getElementById('gs_silverlevel').innerHTML=Number(game.medals[1]);
+	document.getElementById('gs_bronzelevel').innerHTML=Number(game.medals[0]);
+	
+	var mClass='none';
+	var mText='No Medal Awarded';
+	if (game.score>=game.medals[2]) {
+	  mClass='gold';
+	  mText='Gold Medal';	  
+	} else if (game.score>=game.medals[1]) {
+	  mClass='silver';
+	  mText='Silver Medal';	  
+	} else if (game.score>=game.medals[0]) {
+	  mClass='bronze';
+	  mText='Bronze Medal';	  
+	}
+	document.getElementById('gs_medal').innerHTML=Number(mText);
+	
+	var sum=document.getElementById('gamesummary');
+	if (sum.classList.contains('gold')) sum.classList.remove('gold');
+	if (sum.classList.contains('silver')) sum.classList.remove('silver');
+	if (sum.classList.contains('bronze')) sum.classList.remove('bronze');
+	sum.classList.add(mClass);
 }
 
 function showStart()
