@@ -2,16 +2,43 @@
   <head>
     <title>Selection</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="selection.css">
+	
   </head>
   <body onload>
   <div id=game class=start>
     <div id=start>
-	  <div>Selection Task</div>
-	  <a class=gs_newgame onclick="start(['.col.d1','.col.d1','.col.d2','.col.d2','.col.d3'],[45,48,50])" href="#">Play Colour Easy</a>			 	  
-	  <a class=gs_newgame onclick="start(['.col.d2','.col.d3','.col.d3','.col.d4','.col.d4'],[45,48,50])" href="#">Play Colour Medium</a>			 	  
-	  <a class=gs_newgame onclick="start(['.words.d1','.words.d1','.words.d2','.words.d2','.words.d3'],[35,45,50])" href="#">Play Words Easy</a>			 	  
-	  <a class=gs_newgame onclick="start(['.words.d2','.words.d3','.words.d3','.words.d4','.words.d4'],[35,45,50])" href="#">Play Words Medium</a>			 	  
+	  <h1 class=gamename>Selection Task</h1>
+	  <div class=group>
+	  <span class=groupname>Colours</span>
+	  <a class=gs_newgame onclick="start(['.col.d1','.col.d1','.col.d2','.col.d2','.col.d3'],[45,48,50],20)" href="#"><b>Easy</b><span>5 x 20s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.col.d2','.col.d3','.col.d3','.col.d4','.col.d4'],[45,48,50],20)" href="#"><b>Medium</b><span>5 x 20s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.col.d2','.col.d3','.col.d3','.col.d4','.col.d4'],[45,48,50],15)" href="#"><b>Pro</b><span>5 x 15s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.col.d1','.col.d2','.col.d2','.col.d2','.col.d3','.col.d3','.col.d3','.col.d3','.col.d4','.col.d4','.col.d4','.col.d4'],[45,48,50],20)" href="#"><b>Marathon</b><span>12 x 20s Rounds</span></a>			 	  
+	  </div>
+	  <div class=group>
+	  <span class=groupname>Words</span>
+	  <a class=gs_newgame onclick="start(['.words.d1','.words.d1','.words.d2','.words.d2','.words.d3'],[35,45,50],20)" href="#"><b>Easy</b><span>5 x 20s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.words.d2','.words.d3','.words.d3','.words.d4','.words.d4'],[35,45,50],20)" href="#"><b>Medium</b><span>5 x 20s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.words.d2','.words.d3','.words.d3','.words.d4','.words.d4'],[35,45,50],15)" href="#"><b>Pro</b><span>5 x 15s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.words.d1','.words.d2','.words.d2','.words.d2','.words.d3','.words.d3','.words.d3','.words.d3','.words.d4','.words.d4','.words.d4','.words.d4'],[35,45,50],20)" href="#"><b>Marathon</b><span>12 x 20s Rounds</span></a>			 	  
+	  </div>
+	  <div class=group>
+	  <span class=groupname>Knowledge</span>
+	  <a class=gs_newgame onclick="start(['.know.d1','.know.d1','.know.d2','.know.d2','.know.d3'],[35,45,50],20)" href="#"><b>Easy</b><span>5 x 20s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.know.d2','.know.d3','.know.d3','.know.d4','.know.d4'],[35,45,50],20)" href="#"><b>Medium</b><span>5 x 20s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.know.d2','.know.d3','.know.d3','.know.d4','.know.d4'],[35,45,50],15)" href="#"><b>Pro</b><span>5 x 15s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.know.d1','.know.d2','.know.d2','.know.d2','.know.d3','.know.d3','.know.d3','.know.d3','.know.d4','.know.d4','.know.d4','.know.d4'],[35,45,50],20)" href="#"><b>Marathon</b><span>12 x 20s Rounds</span></a>			 	  
+	  </div>
+	  <p>&nbsp </p>
+	  <div class=group>
+	  <span class=groupname>Mix</span>
+	  <a class=gs_newgame onclick="start(['.d1','.d1','.d2','.d2','.d3'],[35,45,50],20)" href="#"><b>Easy</b><span>5 x 20s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.d2','.d3','.d3','.d4','.d4'],[35,45,50],20)" href="#"><b>Medium</b><span>5 x 20s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.d2','.d3','.d3','.d4','.d4'],[35,45,50],15)" href="#"><b>Pro</b><span>5 x 15s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.d1','.d2','.d2','.d2','.d3','.d3','.d3','.d3','.d4','.d4','.d4','.d4'],[35,45,50],20)" href="#"><b>Marathon</b><span>12 x 20s Rounds</span></a>			 	  
+	  </div>
 	  <a class=gs_newgame onclick="start(['.test','.test'],[5,10,15])" href="#">Play TEST</a>			 	  
 	</div>
 	
@@ -26,7 +53,7 @@
 	</div>
 	
     <div class=ctloverlay>
-    <h3>Selection Task</h3>
+    <h3 class=gamename>Selection Task</h3>
 	<h2>Score <span id=score>0</span></h2>
 	<h2>Round <span id=roundnumber>0</span> / <span id=roundtotal>0</span></h2>	
 	<div id=onerulebox><span id=onerulelabel>one rule<span><h1 id=onerule></h1></div>

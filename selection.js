@@ -5,7 +5,7 @@ var game={};
 // 1 - end play
 // 2 - end of round
 
-function start(levelselectors,medalscore)
+function start(levelselectors,medalscore,roundLength)
 {
   game.status=0
   game.medals=medalscore;
@@ -24,6 +24,7 @@ function start(levelselectors,medalscore)
   game.goodHitIndicator=document.getElementById('goodhit');
   game.badHitIndicator=document.getElementById('badhit');  
   game.score=0;
+  game.roundLength=roundLength;
   game.round=-1;
   game.roundcount=game.rounds.length;
   
@@ -184,7 +185,7 @@ function createLevel(lev)
    game.foundCount=0;
    game.timeInit=new Date().getTime();
    game.timeStart=game.timeInit+5000;
-   game.timeEnd=game.timeStart+20000;
+   game.timeEnd=game.timeStart+game.roundLength*1000;
    game.status=0;
    
    for (var i=0;i<items.length;i+=1) {

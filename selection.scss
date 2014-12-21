@@ -2,7 +2,7 @@
 @import 'animationdetail';
 
 body {
-    font-family: Tahoma, Geneva, sans-serif;	  
+   font-family: Tahoma, Geneva, sans-serif;	  
     font-size: 1em;    
     margin: 0px;
 	
@@ -11,6 +11,10 @@ body {
     user-select: none;
 	}
 
+.gamename
+{
+   font-family: 'Merienda One', cursive;
+}
 	
 #gamesummary {
   color: #FFF;
@@ -26,7 +30,7 @@ body {
 
 #start {
   color: #FFF;
-  background-color:#00A;
+  background-color:#006;
   padding: 0em;
   position: absolute;    
   z-index:  1010;
@@ -34,6 +38,42 @@ body {
   height:100%;
   font-size:100%;
   display:none;
+  
+  .group {
+     margin-left: 10%;
+	 margin-top: .5em;
+	 background: linear-gradient(to right, #00C,#006);
+	 padding-left: 1.5em;
+	 padding-top: .5em;
+	 padding-bottom: .5em;
+	 
+	 a {
+	   display:inline-block;
+	   width: 10em;
+	   height: 3em;
+	   text-decoration:none;
+	   color: #FFF;
+       text-align: center;	   
+	   border: 2px solid #BBB;
+	   border-radius: 5px;
+	   b {
+	   display: block;
+	   }
+	 }
+	 
+  }
+  .groupname {
+    font-size: 200%;
+	width:6em;
+	display:inline-block;
+  }
+  .gamename {
+    display:block;
+	width:90%;
+    text-align: right;	
+  }
+  
+  
 }
 
 div.ctloverlay {
