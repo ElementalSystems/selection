@@ -3,53 +3,62 @@
     <title>Selection</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="selection.css">
 	
   </head>
   <body onload>
   <div id=game class=start>
-    <div id=start>
+    <div id=start class=metascreen>
 	  <h1 class=gamename>Selection Task</h1>
 	  <div class=group>
 	  <span class=groupname>Colours</span>
-	  <a class=gs_newgame onclick="start(['.col.d1','.col.d1','.col.d2','.col.d2','.col.d3'],[45,48,50],20)" href="#"><b>Easy</b><span>5 x 20s Rounds</span></a>			 	  
-	  <a class=gs_newgame onclick="start(['.col.d2','.col.d3','.col.d3','.col.d4','.col.d4'],[45,48,50],20)" href="#"><b>Medium</b><span>5 x 20s Rounds</span></a>			 	  
-	  <a class=gs_newgame onclick="start(['.col.d2','.col.d3','.col.d3','.col.d4','.col.d4'],[45,48,50],15)" href="#"><b>Pro</b><span>5 x 15s Rounds</span></a>			 	  
-	  <a class=gs_newgame onclick="start(['.col.d1','.col.d2','.col.d2','.col.d2','.col.d3','.col.d3','.col.d3','.col.d3','.col.d4','.col.d4','.col.d4','.col.d4'],[45,48,50],20)" href="#"><b>Marathon</b><span>12 x 20s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.col.d1','.col.d1','.col.d2','.col.d2','.col.d3'],[45,48,50],20)" href="#"><b>Easy</b><span>5 x 20s Rnds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.col.d2','.col.d3','.col.d3','.col.d4','.col.d4'],[45,48,50],20)" href="#"><b>Medium</b><span>5 x 20s Rnds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.col.d2','.col.d3','.col.d3','.col.d4','.col.d4'],[45,48,50],15)" href="#"><b>Pro</b><span>5 x 15s Rnds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.col.d1','.col.d2','.col.d2','.col.d2','.col.d3','.col.d3','.col.d3','.col.d3','.col.d4','.col.d4','.col.d4','.col.d4'],[45,48,50],20)" href="#"><b>Marathon</b><span>12 x 20s Rnds</span></a>			 	  
 	  </div>
 	  <div class=group>
 	  <span class=groupname>Words</span>
-	  <a class=gs_newgame onclick="start(['.words.d1','.words.d1','.words.d2','.words.d2','.words.d3'],[35,45,50],20)" href="#"><b>Easy</b><span>5 x 20s Rounds</span></a>			 	  
-	  <a class=gs_newgame onclick="start(['.words.d2','.words.d3','.words.d3','.words.d4','.words.d4'],[35,45,50],20)" href="#"><b>Medium</b><span>5 x 20s Rounds</span></a>			 	  
-	  <a class=gs_newgame onclick="start(['.words.d2','.words.d3','.words.d3','.words.d4','.words.d4'],[35,45,50],15)" href="#"><b>Pro</b><span>5 x 15s Rounds</span></a>			 	  
-	  <a class=gs_newgame onclick="start(['.words.d1','.words.d2','.words.d2','.words.d2','.words.d3','.words.d3','.words.d3','.words.d3','.words.d4','.words.d4','.words.d4','.words.d4'],[35,45,50],20)" href="#"><b>Marathon</b><span>12 x 20s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.words.d1','.words.d1','.words.d2','.words.d2','.words.d3'],[35,45,50],20)" href="#"><b>Easy</b><span>5 x 20s Rnds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.words.d2','.words.d3','.words.d3','.words.d4','.words.d4'],[35,45,50],20)" href="#"><b>Medium</b><span>5 x 20s Rnds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.words.d2','.words.d3','.words.d3','.words.d4','.words.d4'],[35,45,50],15)" href="#"><b>Pro</b><span>5 x 15s Rnds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.words.d1','.words.d2','.words.d2','.words.d2','.words.d3','.words.d3','.words.d3','.words.d3','.words.d4','.words.d4','.words.d4','.words.d4'],[35,45,50],20)" href="#"><b>Marathon</b><span>12 x 20s Rnds</span></a>			 	  
 	  </div>
 	  <div class=group>
 	  <span class=groupname>Knowledge</span>
-	  <a class=gs_newgame onclick="start(['.know.d1','.know.d1','.know.d2','.know.d2','.know.d3'],[35,45,50],20)" href="#"><b>Easy</b><span>5 x 20s Rounds</span></a>			 	  
-	  <a class=gs_newgame onclick="start(['.know.d2','.know.d3','.know.d3','.know.d4','.know.d4'],[35,45,50],20)" href="#"><b>Medium</b><span>5 x 20s Rounds</span></a>			 	  
-	  <a class=gs_newgame onclick="start(['.know.d2','.know.d3','.know.d3','.know.d4','.know.d4'],[35,45,50],15)" href="#"><b>Pro</b><span>5 x 15s Rounds</span></a>			 	  
-	  <a class=gs_newgame onclick="start(['.know.d1','.know.d2','.know.d2','.know.d2','.know.d3','.know.d3','.know.d3','.know.d3','.know.d4','.know.d4','.know.d4','.know.d4'],[35,45,50],20)" href="#"><b>Marathon</b><span>12 x 20s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.know.d1','.know.d1','.know.d2','.know.d2','.know.d3'],[35,45,50],20)" href="#"><b>Easy</b><span>5 x 20s Rnds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.know.d2','.know.d3','.know.d3','.know.d4','.know.d4'],[35,45,50],20)" href="#"><b>Medium</b><span>5 x 20s Rnds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.know.d2','.know.d3','.know.d3','.know.d4','.know.d4'],[35,45,50],15)" href="#"><b>Pro</b><span>5 x 15s Rnds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.know.d1','.know.d2','.know.d2','.know.d2','.know.d3','.know.d3','.know.d3','.know.d3','.know.d4','.know.d4','.know.d4','.know.d4'],[35,45,50],20)" href="#"><b>Marathon</b><span>12 x 20s Rnds</span></a>			 	  
 	  </div>
 	  <p>&nbsp </p>
 	  <div class=group>
 	  <span class=groupname>Mix</span>
-	  <a class=gs_newgame onclick="start(['.d1','.d1','.d2','.d2','.d3'],[35,45,50],20)" href="#"><b>Easy</b><span>5 x 20s Rounds</span></a>			 	  
-	  <a class=gs_newgame onclick="start(['.d2','.d3','.d3','.d4','.d4'],[35,45,50],20)" href="#"><b>Medium</b><span>5 x 20s Rounds</span></a>			 	  
-	  <a class=gs_newgame onclick="start(['.d2','.d3','.d3','.d4','.d4'],[35,45,50],15)" href="#"><b>Pro</b><span>5 x 15s Rounds</span></a>			 	  
-	  <a class=gs_newgame onclick="start(['.d1','.d2','.d2','.d2','.d3','.d3','.d3','.d3','.d4','.d4','.d4','.d4'],[35,45,50],20)" href="#"><b>Marathon</b><span>12 x 20s Rounds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.d1','.d1','.d2','.d2','.d3'],[35,45,50],20)" href="#"><b>Easy</b><span>5 x 20s Rnds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.d2','.d3','.d3','.d4','.d4'],[35,45,50],20)" href="#"><b>Medium</b><span>5 x 20s Rnds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.d2','.d3','.d3','.d4','.d4'],[35,45,50],15)" href="#"><b>Pro</b><span>5 x 15s Rnds</span></a>			 	  
+	  <a class=gs_newgame onclick="start(['.d1','.d2','.d2','.d2','.d3','.d3','.d3','.d3','.d4','.d4','.d4','.d4'],[35,45,50],20)" href="#"><b>Marathon</b><span>12 x 20s Rnds</span></a>			 	  
 	  </div>
-	  <a class=gs_newgame onclick="start(['.test','.test'],[5,10,15])" href="#">Play TEST</a>			 	  
 	</div>
 	
-	<div id=gamesummary>
-	  <div>Tournament Complete</div>
-	  <div>Final Score <span id=gs_score>0</span></div>
-	  <div id=gs_medal>No Medal Awarded</div>
-	  <div> Gold: <span id=gs_goldlevel>0</span></div>
-	  <div> Silver: <span id=gs_silverlevel>0</span></div>
-	  <div> Bronze: <span id=gs_bronzelevel>0</span></div>
-	  <a id=gs_newgame onclick="showStart()" href="#">Main Menu</a>			 	  
+	<div id=gamesummary class=metascreen>
+	  <h1 class=gamename>Selection Task</h1>
+	  <div class=group>
+	  <h3><span class=gs_medalname>Final Score</span><span id=gs_score>0</span></h3>
+	  </div>
+	  <div class=group>
+	  <h2 id=gs_medal>No Medal Awarded</h2>
+	  </div>
+	  <div class=group>
+	  <h3>Medal Requirements</h3>
+	  <div><span class=gs_medalname>Gold</span><span id=gs_goldlevel>0</span></div>
+	  <div><span class=gs_medalname>Silver</span><span id=gs_silverlevel>0</span></div>
+	  <div><span class=gs_medalname>Bronze</span><span id=gs_bronzelevel>0</span></div>
+	  </div>
+	  <div class=group>
+	  <a id=gs_restart onclick="showStart()" href="#"><h2>Play Again</h2></a>			 	  
+	  </div>	  
 	</div>
 	
     <div class=ctloverlay>
@@ -392,8 +401,7 @@
 	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>Yeti</div>	  
 	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Pollute</div>	  	  
 	</div>
-	
-	
+		
 	<div class="leveldefinition d4 words">
 	  <div class="rule">Select words that Rhyme with Chair</div>
 	  <div class="piece wordpiece hslidethrob" data-duplicate-count=5>Loot</div>	  
@@ -406,6 +414,193 @@
 	  <div class="piece wordpiece hfslidethrob" data-duplicate-count=2>User</div>	  
 	  <div class="piece wordpiece vfslidethrobx target" data-duplicate-count=2>Flair</div>	  	  
 	</div>
+	
+	<div class="leveldefinition d1 know">
+	  <div class="rule">Select the Mammals</div>
+	  <div class="piece knowpiece hturn target" data-duplicate-count=2>Rat</div>	  
+	  <div class="piece knowpiece hturnx" data-duplicate-count=5>Lizard</div>	  
+	  <div class="piece knowpiece hturnx" data-duplicate-count=4>Snake</div>	  
+	  <div class="piece knowpiece vturn target" data-duplicate-count=2>Bat</div>	  
+	  <div class="piece knowpiece vturn target" data-duplicate-count=2>Seal</div>	  
+	  <div class="piece knowpiece vturnx" data-duplicate-count=5>Ant</div>	  
+	  <div class="piece knowpiece vturn target" data-duplicate-count=2>Antelope</div>	  
+	  <div class="piece knowpiece vturnx" data-duplicate-count=5>Crab</div>	  
+	  <div class="piece knowpiece vturn target" data-duplicate-count=1>Lion</div>	  
+	  <div class="piece knowpiece vturn target" data-duplicate-count=1>Cat</div>	  
+	  <div class="piece knowpiece vturnx" data-duplicate-count=3>Penguin</div>	  	  
+	</div>
+	
+	<div class="leveldefinition d1 know">
+	  <div class="rule">Select the Reptiles</div>
+	  <div class="piece knowpiece hturn" data-duplicate-count=2>Rat</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=3>Lizard</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=2>Snake</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Bat</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Seal</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=2>Crocodile</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Antelope</div>	  
+	  <div class="piece knowpiece vturnx" data-duplicate-count=5>Crab</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Lion</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Cat</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=3>Chameleon</div>	  	  
+	</div>
+	
+	
+	<div class="leveldefinition d1 know">
+	  <div class="rule">Select the Cities in Europe</div>
+	  <div class="piece knowpiece hturn" data-duplicate-count=2>Tokyo</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=3>Rome</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=2>Moscow</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Cairo</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Lagos</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=2>Lisbon</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Beijing</div>	  
+	  <div class="piece knowpiece vturnx" data-duplicate-count=5>Siagon</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Addis Ababa</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>New York</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=3>Hamburg</div>	  	  
+	</div>
+	
+	
+	<div class="leveldefinition d2 know">
+	  <div class="rule">Select the Cities in Africa</div>
+	  <div class="piece knowpiece hturn" data-duplicate-count=2>Tokyo</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=3>Kinshasa</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=2>Nairobi</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Rome</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Tehran</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=2>Dakar</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Izmir</div>	  
+	  <div class="piece knowpiece vturnx" data-duplicate-count=5>Siagon</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Amsterdam</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>New York</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=3>Addis Ababa</div>	  	  
+	</div>
+	
+	<div class="leveldefinition d2 know test">
+	  <div class="rule">Select the watercraft</div>
+	  <div class="piece knowpiece hturn" data-duplicate-count=2>Cart</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=3>Canoe</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=2>Tug</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Sleeper</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Coupe</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=2>Gondola</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Kite</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=1>Hydrofoil</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Jet</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Blimp</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=2>Barge</div>	  	  
+	</div>
+	
+	<div class="leveldefinition d2 know">
+	  <div class="rule">Select the Cold Blooded Animals</div>
+	  <div class="piece knowpiece hturn" data-duplicate-count=2>Rat</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=3>Frog</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=2>Shark</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Bat</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Seal</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=2>Crocodile</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Antelope</div>	  
+	  <div class="piece knowpiece vturnx" data-duplicate-count=5>Whale</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Lion</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Cat</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=3>Salmon</div>	  	  
+	</div>
+	
+	<div class="leveldefinition d3 know">
+	  <div class="rule">Select the Insects</div>
+	  <div class="piece knowpiece hturn" data-duplicate-count=2>Rat</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=3>Ant</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=2>Bee</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Spider</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Earthworm</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=2>Mosquito</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Millipede</div>	  
+	  <div class="piece knowpiece vturnx" data-duplicate-count=5>Crab</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Snail</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Cat</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=3>Locust</div>	  	  
+	</div>	
+	
+	<div class="leveldefinition d3 know">
+	  <div class="rule">Select the 20th Century Inventions</div>
+	  <div class="piece knowpiece hturn" data-duplicate-count=2>Electric Light</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=3>Neon Lights</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=2>Zipper</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Photography</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Steam Train</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=2>Atom Bomb</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Revolver</div>	  
+	  <div class="piece knowpiece vturnx" data-duplicate-count=5>Stapler</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Pasteurisation</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Car</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=3>Television</div>	  	  
+	</div>
+	
+	
+	<div class="leveldefinition d3 know">
+	  <div class="rule">Select Cities in South America</div>
+	  <div class="piece knowpiece hturn" data-duplicate-count=2>San Francisco</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=3>Santiago</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=2>Lima</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>New Delhi</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Dakar</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=2>Rio de Janeiro</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Rome</div>	  
+	  <div class="piece knowpiece vturnx" data-duplicate-count=5>Shanghai</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>New York</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Washington DC</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=3>San Paulo</div>	  	  
+	</div>
+	
+	
+	<div class="leveldefinition d4 know">
+	  <div class="rule">Select the Molluscs</div>
+	  <div class="piece knowpiece hturn" data-duplicate-count=2>Rat</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=3>Snail</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=2>Squid</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Spider</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Earthworm</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=2>Oyster</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Antelope</div>	  
+	  <div class="piece knowpiece vturnx" data-duplicate-count=5>Crab</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Millipede</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Cat</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=3>Nudibranch</div>	  	  
+	</div>
+	
+	
+	<div class="leveldefinition d4 know">
+	  <div class="rule">Select the Gases at Room Temperature</div>
+	  <div class="piece knowpiece hturn" data-duplicate-count=2>Mercury</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=3>Oxygen</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=2>Chlorine</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Water</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Alcohol</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=2>Neon</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Nickle</div>	  
+	  <div class="piece knowpiece vturnx" data-duplicate-count=5>Aluminium</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Carbon</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Galium</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=3>Amonia</div>	  	  
+	</div>
+	
+	<div class="leveldefinition d4 know">
+	  <div class="rule">Select the Capital Cities</div>
+	  <div class="piece knowpiece hturn" data-duplicate-count=2>Naples</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=3>London</div>	  
+	  <div class="piece knowpiece hturnx target" data-duplicate-count=2>Oslo</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Hamburg</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=2>Saint Petersburg</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=2>Warsaw</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=3>Shanghai</div>	  
+	  <div class="piece knowpiece vturnx" data-duplicate-count=5>Mombassa</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Hong Kong</div>	  
+	  <div class="piece knowpiece vturn" data-duplicate-count=1>Buenos Aires</div>	  
+	  <div class="piece knowpiece vturnx target" data-duplicate-count=3>Khartoum</div>	  	  
+	</div>
+	
+	
 	
   </div>
   </body>
