@@ -1,0 +1,136 @@
+
+
+@include keyframes('hroll') {
+  0% { 
+    left:-20%;
+    @include transform(translateZ(0) rotate(0deg));
+  }
+  50% {
+    left:20%;
+	@include transform(translateZ(0) rotate(720deg));
+  }
+  100% { 
+ 	left:-21%;
+    @include transform(translateZ(0) rotate(0deg));
+  }
+};
+
+@include keyframes('bounceup') {
+  0% { 
+    left:-20%;
+	top:50%;
+    @include transform(translateZ(0) rotate(0deg));
+  }
+  50% {
+    top:0%;
+	left:0%;
+    @include transform(translateZ(0) rotate(0deg));
+  }
+  90% { 
+ 	left:20%;
+	top:50%;
+    @include transform(translateZ(0) rotate(0deg));
+  }
+  100% { 
+ 	left:-20%;
+	top:50%;
+    @include transform(translateZ(0) rotate(0deg));
+  }
+};
+
+
+@include keyframes('throb') {
+  0% { 
+    opacity: 1;    
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 1;
+  }  
+};
+
+@include keyframes('growfade') {
+  0% { 
+    opacity: 1;
+    @include transform(scale(1,1));
+  }
+  100% { 
+	@include transform(scale(5,5));
+    opacity: 0;
+  }
+};
+
+
+@include keyframes('hslidethrob') {
+  0% { 
+    left: -10%;
+    @include transform(scale(.6,.6));
+  }
+  
+  
+  50% { 
+	left: 0%;
+    @include transform(scale(1,1));
+  }
+  
+  100% { 
+	left: 10%;
+    @include transform(scale(.6,.6));
+  }
+};
+
+
+@include keyframes('vslidethrob') {
+  0% { 
+    top: -10%;
+    @include transform(scale(.6,.6));
+  }
+  
+  
+  50% { 
+	top: 0%;
+    @include transform(scale(1,1));
+  }
+  
+  100% { 
+	top: 10%;
+    @include transform(scale(.6,.6));
+  }
+};
+
+
+@include keyframes('vturn') {
+  0% { 
+    @include transform(rotateX(0deg));
+	color: #0F0;
+  }  
+  
+  70% { 
+    @include transform(rotateX(350deg));
+	color: #FA0;
+  }
+  
+  100% { 
+    @include transform(rotateX(360deg));
+	color: #F00;
+  }
+};
+
+@include keyframes('hturn') {
+  0% { 
+    @include transform(rotateY(0deg));
+	color: #0F0;
+  }  
+  
+  70% { 
+    @include transform(rotateY(350deg));
+	color: #0FF;
+  }
+  
+  100% { 
+    @include transform(rotateY(360deg));
+	color: #00F;
+  }
+};
