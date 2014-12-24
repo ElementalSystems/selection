@@ -41,7 +41,12 @@ function generateRounds(selectors)
   for (var i=0;i<selectors.length;i+=1) {
     var full=".leveldefinition"+selectors[i];
     var list=document.querySelectorAll(full);    
-	var ch=Math.floor(Math.random()*list.length);
+	var ch=0;
+	for (var i=0;i<5;i+=1) {
+	  ch=Math.floor(Math.random()*list.length);
+	  var rnd=list[ch];
+	  if (rounds.indexOf(rnd)<0) break; //we didn't already use it	  
+	}
 	rounds.push(list[ch]);
   }
   return rounds;
@@ -51,6 +56,9 @@ function nextRound()
 {
   game.round+=1;
   
+  document.getElementById('completebonus').innerHTML='';	   
+  document.getElementById('timebonus').innerHTML='';	   
+
   createLevel(game.rounds[game.round]);
   	
 }
@@ -158,26 +166,43 @@ function timerTick()
 		game.status=1; //in play now
      }
    }
-   else if (game.status==1) {
-     if ((game.timeNow>game.timeEnd)||(game.foundCount>=game.totalCount)) { //start of round
-	    if (game.holder.classList.contains('inplay'))
-		  game.holder.classList.remove('inplay');
-		if (!game.holder.classList.contains('roundover'))
-		  game.holder.classList.add('roundover');		  
-		if (game.round==game.rounds.length-1) 
-		  if (!game.holder.classList.contains('gameover'))
-		    game.holder.classList.add('gameover');		  
-		
-		game.status=2;//game ended
+  else if (game.status==1) {
+     if ((game.timeNow>game.timeEnd)||(game.foundCount>=game.totalCount)) { //End of round
+	   endOfRound();
      }
   }
   setScoreboard();
   setTimeout(timerTick,500);    
 }
 
+function endOfRound()
+{
+	if (game.holder.classList.contains('inplay'))
+	  game.holder.classList.remove('inplay');
+	if (!game.holder.classList.contains('roundover'))
+	  game.holder.classList.add('roundover');		  
+	if (game.round==game.rounds.length-1) 
+	  if (!game.holder.classList.contains('gameover'))
+		game.holder.classList.add('gameover');		  
+
+	if (game.foundCount>=game.totalCount) {
+	   document.getElementById('completebonus').innerHTML='  (+3 Completion Bonus)';	   
+	   game.score+=3;
+	}
+	
+	var timeBonus=Math.round((game.timeEnd-game.timeNow)/2000);
+	if (timeBonus>0) {
+	   document.getElementById('timebonus').innerHTML='  (+'+Number(timeBonus)+' Bonus)';	   
+	   game.score+=timeBonus;
+	}	
+	game.status=2;//game ended
+
+}
+
 function createLevel(lev)
 {
-   var items=lev.getElementsByClassName('piece');
+   game.items=lev.getElementsByClassName('piece');
+   game.itemGenerate=0;
    game.oneRuleSpan.innerHTML=lev.getElementsByClassName('rule')[0].innerHTML;
    game.levelDefinition=lev;
    game.board.innerHTML="";
@@ -188,23 +213,8 @@ function createLevel(lev)
    game.timeEnd=game.timeStart+game.roundLength*1000;
    game.status=0;
    
-   for (var i=0;i<items.length;i+=1) {
-       var item=items[i];
-	   var count=item.getAttribute('data-duplicate-count');
-	   if (count==undefined) count=1;
-	   for (var j=0;j<count;j+=1) {
-	     var nitem=item.cloneNode(true);
-		 game.board.appendChild(nitem);
-	     nitem.style.marginLeft=String(Math.random()*(game.board.clientWidth-100))+'px';
-	     nitem.style.marginTop=String(Math.random()*(game.board.clientHeight-100))+'px';
-		 nitem.style.zIndex=String(Math.round(Math.random()*100));
-	     if (nitem.classList.contains('target'))  {
-		   nitem.onmousedown=TargetClicked;
-		   game.totalCount+=1;
-         } else
-		   nitem.onmousedown=NonTargetClicked;		 
-       }	   
-   }
+   createLevelItems();
+   
    game.board.appendChild(game.goodHitIndicator);
    game.board.appendChild(game.badHitIndicator);
    game.goodHitIndicator=document.getElementById('goodhit');
@@ -214,6 +224,31 @@ function createLevel(lev)
    if (game.holder.classList.contains('roundover'))
 		  game.holder.classList.remove('roundover');
 	
+}
+
+function createLevelItems()
+{
+   var more=false;
+   for (var i=0;i<game.items.length;i+=1) {
+	   var item=game.items[i];
+	   var count=item.getAttribute('data-duplicate-count');	   
+	   if (count==undefined) count=1;
+	   if (game.itemGenerate>=count) continue;
+	   more=true;
+	   var nitem=item.cloneNode(true);
+	   game.board.appendChild(nitem);
+	   nitem.style.marginLeft=String(Math.random()*(game.board.clientWidth*.8))+'px';
+	   nitem.style.marginTop=String(Math.random()*(game.board.clientHeight*.8))+'px';
+	   nitem.style.zIndex=String(Math.round(Math.random()*100));
+	   if (nitem.classList.contains('target'))  {
+		   nitem.onmousedown=TargetClicked;
+		   game.totalCount+=1;
+	   } else {
+		   nitem.onmousedown=NonTargetClicked;		 
+	   }	   
+   }
+   game.itemGenerate+=1;
+   if (more) setTimeout(createLevelItems,500);
 }
 
 

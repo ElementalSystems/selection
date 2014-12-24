@@ -37,10 +37,10 @@ body {
   }
   
   .group {
-     margin-left: 5%;
+     margin-left: 3%;
 	 margin-top: .5em;
 	 background: linear-gradient(to right, #00C,#006);
-	 padding-left: 1.5em;
+	 padding-left: 1em;
 	 padding-top: .5em;
 	 padding-bottom: .5em;
 	 
@@ -60,13 +60,24 @@ body {
   }
   .groupname {
     font-size: 200%;
-	width:6em;
+	width:5em;
 	display:inline-block;
   }
+  
   .gamename {
     display:block;
 	width:90%;
     text-align: right;	
+	margin-bottom: 0px;
+  }
+    
+  a.ellink {
+    color: #CCC;
+    text-decoration: none;
+	display:block;
+	width:95%;
+    text-align: right;	
+  
   }
   
   
@@ -185,10 +196,13 @@ div.roundover {
   
   #onerule {
 	padding:.1em;		
+	
   }
   
   #onerulebox {
 	@include animation(none);
+	font-size: 50%;
+	
    }
 	  
 }
@@ -408,3 +422,76 @@ div.leveldefinition {
   display:none;
 }
 
+@media only screen and (max-device-width: 600px)
+{
+ .metascreen {
+   
+  .group {
+     margin-left: 3%;
+	 margin-top: .1em;
+	 background: linear-gradient(to right, #00C,#006);
+	 padding-left: 1em;
+	 padding-top: .1em;
+	 padding-bottom: .1em;	 
+	 a {
+	   width: 20%;
+	 }
+   }
+   
+  .groupname {
+    font-size: 150%;
+	width:90%;
+	display:inline-block;
+  }
+  
+  
+  
+ }
+ 
+ #board {
+ 
+	div.piece.colpiece
+	{
+	  padding: .1em;     
+	  b {
+	     font-size: 120%
+	  }
+
+	}
+	
+	div.piece.wordpiece
+	{
+	  padding: .1em;
+	  border: 2px inset #AAA;      
+	}
+
+	
+ }
+ 
+ div.inplay {
+	div.ctloverlay{
+	  font-size: 40%;
+	  width:20%;
+	  background-color: rgba(0,0,96,.4);
+      height: auto;
+	  opacity: .7;
+	  @include transition(width 1s, height 1s, font-size 1s);
+	  
+	  #onerule {
+		padding:.1em;			    
+		
+	  }
+	  
+	  .gamename {
+	    display:none;
+	  }
+	  
+	  #onerulebox {
+		@include animation(none);	  
+	  }
+	  
+	}
+ }
+
+
+}

@@ -104,15 +104,24 @@
 @include keyframes('vturn') {
   0% { 
     @include transform(rotateX(0deg));
+	top: 0%;
 	color: #0F0;
   }  
   
-  70% { 
+  50% {
+    top: 2em;
+    @include transform(rotateX(180deg));
+	color: #F00;
+  }
+  
+  80% { 
+    top: 0%;
     @include transform(rotateX(350deg));
 	color: #FA0;
   }
   
   100% { 
+    top: 0%;
     @include transform(rotateX(360deg));
 	color: #F00;
   }
@@ -120,16 +129,25 @@
 
 @include keyframes('hturn') {
   0% { 
+    left:0px;
     @include transform(rotateY(0deg));
 	color: #0F0;
   }  
   
+  50% {
+    left: 4em;
+    @include transform(rotateX(180deg));
+	color: #F00;
+  }
+  
   70% { 
+    left:0px;
     @include transform(rotateY(350deg));
 	color: #0FF;
   }
   
   100% { 
+    left:0px;
     @include transform(rotateY(360deg));
 	color: #00F;
   }
