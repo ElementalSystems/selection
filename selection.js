@@ -42,10 +42,10 @@ function generateRounds(selectors)
     var full=".leveldefinition"+selectors[i];
     var list=document.querySelectorAll(full);    
 	var ch=0;
-	for (var i=0;i<5;i+=1) {
+	for (var j=0;j<10;j+=1) {
 	  ch=Math.floor(Math.random()*list.length);
 	  var rnd=list[ch];
-	  if (rounds.indexOf(rnd)<0) break; //we didn't already use it	  
+	  if (rounds.indexOf(rnd)<0) break; //we didn't already use it	so use it
 	}
 	rounds.push(list[ch]);
   }
